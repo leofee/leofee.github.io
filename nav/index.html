@@ -1,9 +1,4 @@
----
-layout: false
-title: nav
-date: 2016-05-27 13:42:32
-comments: false
----
+
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
@@ -11,9 +6,29 @@ comments: false
 	<style>
 		*{
 			margin:0;padding:0;
+			
+		}
+		.bg_img{
+			background:url(http://7xpf5o.com1.z0.glb.clouddn.com/Tamara-Lichtenstein-23.jpg);
+			width:100%;
+			height:100%;
+			position:fixed;
+			top:0;
+			left:0;
+			z-index:-1;
+			background-size:cover;
+			
+		}
+		li{
+			list-style: none;
+			padding:20px 0;
 		}
 		a{
 			text-decoration:none;
+			display:block;
+		}
+		img{
+			display:block;
 		}
 		
 		.peppermintCandy{
@@ -21,21 +36,85 @@ comments: false
 			margin-right:auto;
 			width:70px;
 			height:32px;
-			border:2px solid #6d6d6d;
+			border:2px solid #ffffff;
 			text-align: center;
 			line-height:32px;
 			border-left: none;
 			border-right:none;
-
-			
+			margin-top:30px;
 		}
+		.navWrapper{
+			width:700px;
+			margin:50px auto;
+
+		}
+		.navWrapper img:hover{
+			-webkit-animation:circle 1s infinite linear;/*匀速 循环*/
+		}
+		@-webkit-keyframes circle{
+		0%{ transform:rotate(0deg); }
+		100%{ transform:rotate(360deg); }
+		}
+		.navWrapper ul{
+			float:left;
+			padding:0 30px;
+		}
+		
 	</style>
 </head>
 <body>
-	<div style="width:100%;height:65px;background-color:#f5f5f5;padding-top:35px;">
+	<div class="bg_img"></div>
+	<div style="width:100%;height:65px;padding-top:35px;">
 		<div class="peppermintCandy"><a href="http://leofee.co"><span style="font-size:22px;
 			font-weight:bold;
-			color:#222222;font-family:microsoft yahei;">薄荷糖</span></a></div>
+			color:#ffffff;font-family:microsoft yahei;">薄荷糖</span></a></div>
+	</div>
+	<div class="navWrapper">
+		<ul>
+
+			<li><a href="http://www.500px.com" target="_blank"><img src="http://7xpf5o.com1.z0.glb.clouddn.com/500px.png"/></a> </li> 
+			<li><a href="http://www.cnu.cc" target="_blank"><img src="http://7xpf5o.com1.z0.glb.clouddn.com/cnu%E8%A7%86%E8%A7%89%E8%81%94%E7%9B%9F.png"/></a> </li> 
+			<li><a href="http://www.behance.net" target="_blank"><img src="http://7xpf5o.com1.z0.glb.clouddn.com/Behance.png"/></a> </li> 
+			
+		</ul>
+		<ul>
+
+			<li><a href="http://gallerix.asia/" target="_blank"><img src="http://7xpf5o.com1.z0.glb.clouddn.com/Gallerix%20asia.png"/></a> </li> 
+			<li><a href="http://www.itechzero.com/google-mirror-sites-collect.html" target="_blank"><img src="http://7xpf5o.com1.z0.glb.clouddn.com/Google.png"/></a> </li> 
+			<li><a href="http://www.tuyiyi.com/hao/" target="_blank"><img src="http://7xpf5o.com1.z0.glb.clouddn.com/Inspiration.png"/></a> </li> 
+			
+		</ul>
+		<ul>
+
+			<li><a href="http://astrodoor.cc/index.jsp" target="_blank"><img src="http://7xpf5o.com1.z0.glb.clouddn.com/%E5%8D%A0%E6%98%9F%E4%B9%8B%E9%97%A8.png"/></a> </li> 
+			<li><a href="http://www.quora.com" target="_blank"><img src="http://7xpf5o.com1.z0.glb.clouddn.com/Quora.png"/></a> </li> 
+			<li><a href="http://www.iconfont.cn/" target="_blank"><img src="http://7xpf5o.com1.z0.glb.clouddn.com/Iconfont.png"/></a> </li> 
+			
+		</ul>
+		<ul>
+
+			<li><a href="http://www.logopond.com" target="_blank"><img src="http://7xpf5o.com1.z0.glb.clouddn.com/logopond.png"/></a> </li> 
+			<li><a href="http://izquotes.com/" target="_blank"><img src="http://7xpf5o.com1.z0.glb.clouddn.com/IZQuotes.png"/></a> </li> 
+			<li><a href="http://user.qzone.qq.com/497051512/photo/V10zmUcM0nMxnI" target="_blank"><img src="http://7xpf5o.com1.z0.glb.clouddn.com/QQzone.png"/></a> </li> 
+			
+		</ul>
+		<ul>
+
+			<li><a href="http://www.500px.com" target="_blank"><img src="http://7xpf5o.com1.z0.glb.clouddn.com/500px.png"/></a> </li> 
+			<li><a href="http://www.500px.com" target="_blank"><img src="http://7xpf5o.com1.z0.glb.clouddn.com/500px.png"/></a> </li> 
+			<li><a href="http://www.500px.com" target="_blank"><img src="http://7xpf5o.com1.z0.glb.clouddn.com/500px.png"/></a> </li> 
+			
+		</ul>
+
+
+
+
+
+
+
+
+
+
 	</div>
 </body>
 </html>
