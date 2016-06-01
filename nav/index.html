@@ -3,12 +3,13 @@
 <head>
 	<meta charset="UTF-8">
 	<title>nav</title>
+	<script src="http://www.w3school.com.cn/jquery/jquery-1.11.1.min.js"></script>
 	<style>
 		*{
 			margin:0;padding:0;
 		}
-		html{
-			background:url(http://7xpf5o.com1.z0.glb.clouddn.com/bg_img02.png) no-repeat center center fixed;
+		body{
+			background:url(http://pic1.win4000.com/wallpaper/b/51f88137799e8.jpg) no-repeat center center fixed;
 			background-size:cover;
 		}
 		
@@ -25,7 +26,7 @@
 			background-attachment: fixed;
 			
 		}  */
-		li{
+		.navWrapper li{
 			list-style: none;
 			padding:20px 0;
 		}
@@ -34,32 +35,41 @@
 			
 		}
 		img{
-			display:block;
+			border:0;
+		}
+		.navTop{
+			width:100%;
+			height:70px;
+			background:linear-gradient(to bottom,#3cbd77,#32b16c);
+			position:fixed;
+			left:0;
+			top:0;
+			z-index: 999999
 		}
 		
 		.peppermintCandy{
-			margin-left: auto;
-			margin-right:auto;
+			margin-left:265px;
+			margin-top:22px;
 			width:100px;
 			height:30px;
-			border:2px solid #ffffff;
+			/*border:2px solid #ffffff;*/
 			text-align: center;
 			line-height:30px;
 			border-top: none;
 			border-bottom:none;
-			margin-top:60px;
 		}
 		.navWrapper{
 			width:700px;
-			margin-top:30px;
+			/*margin-top:30px;*/
 			margin-right: auto;
 			margin-left:auto;
+			clear:left;
 
 		}
 		.navWrapper img:hover{
 			-webkit-animation:circle 1s infinite linear;/*匀速 循环*/
 		}
-		@-webkit-keyframes circle{
+		@keyframes circle{
 		0%{ transform:rotate(0deg); }
 		100%{ transform:rotate(360deg); }
 		}
@@ -84,34 +94,86 @@
 			top:-68px;
 			left:-12px;
 		}
-		form{
-			margin:0;
-			padding:0;
-			font-size:14px;
-			margin-top:36px;
+
+
+		/*搜索引擎切换*/
+		
+		input, button, select, textarea {
+				outline:none;
 		}
-		input{
-			font-size:16px;
-			font-family: microsoft yahei;
-			outline:none;
-			border:0;
-			color:#1dc6a5;
-			text-indent:20px;
-			line-height:36px;
-		}
-		.baiduSearch{
-			width: 500px;
-			height:36px;
-			border-radius:20px;
-			
-		}
-		.baiduSubmit{
-			background-color:#ffffff;
-			border:0; 
-			width:100px;
-			height:36px;
-			background
-		}
+#search_main{
+	width:629px;
+	height:40px;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:40px;
+	/*background:#fff;*/
+	
+}
+#search {
+	width:550px;
+	height:36px;
+/*	border:#1dc6a5 2px solid;*/
+/*	float:left;*/
+	border-radius:20px;
+	background: #fff;
+	font-family:microsoft yahei;
+	margin:0 auto;
+}
+.jsSelect {
+	width:62px;
+	height:150px;
+	float:left;
+	display:inline;
+	margin-left:14px;
+}
+.jsSelect ul {
+	width:62px;
+	height:36px;
+	overflow:hidden;
+	background:#FFF;
+	float:left;
+	position:absolute;
+}
+.jsSelect ul .s {
+	display:block;
+	cursor:default;
+	cursor:pointer;
+	color:#1dc6a5;
+	border:none;
+/*	border-left:2px solid #1dc6a5;*/
+	/*border-radius: 20px;*/
+}
+.jsSelect ul li {
+	width:62px;
+	height:36px;
+	line-height:36px;
+	font-size: 16px;
+	font-weight: bold;
+	cursor:pointer;
+	text-align:center;
+	color:#1dc6a5;
+	border:none;
+	/*border-left:2px solid #1FA9F0;
+	border-right:2px solid #1FA9F0;*/
+}
+/* #youdao_s {
+	border-bottom:2px solid #1FA9F0;
+} */
+#inp {
+	width:410px;
+	height:36px;
+	background:none;
+	margin-left:2px;
+	font-size:16px;
+	border:none;
+	line-height:36px;
+	color:#1dc6a5;
+}
+
+
+
+
 		
 	</style>
 </head>
@@ -119,22 +181,45 @@
 	<!-- 背景大图 -->
 	<div class="bg_img"></div>
 <div>
-		<div class="peppermintCandy"><a href="http://leofee.co" target="_blank"><span style="font-size:28px;
+		<div class="navTop">
+			<div class="peppermintCandy"><a href="http://leofee.co" target="_blank"><span style="font-size:22px;
 			font-weight:bold;
 			color:#ffffff;font-family:microsoft yahei;">薄荷糖</span></a>
+			</div>
 		</div>
 	
-	<!-- 百度搜索 -->
+	<!-- 搜索引擎 -->
+		<!-- 谷歌搜索
+ 			</form>
 
-		<center>
-			<form action="http://www.baidu.com/baidu" target="_blank">
+				<form action="http://gzgoogle.tk/search?hl=zh-CN&q" target="_blank">
 
-    			<input class="baiduSearch" placeholder="百度" autocomplete="off" type=text name=word size=40>
+    			<input class="googleSearch" placeholder="谷歌" autocomplete="off" type=text name=q size=40>
 
-    			<!-- <input class="baiduSubmit" type="submit" value="百度一下"> -->
+    			<input class="googleSubmit" type="submit" value="百度一下">
 
  			</form>
- 		</center>
+ -->
+ 		<center><a href="http://gzgoogle.tk/doodles?hl=zh-CN" target="_blank"><img src="http://7xpf5o.com1.z0.glb.clouddn.com/google%20doodle.gif" width="428px" height="169px" style="border-radius:10px; margin-top:120px;"></a></center>
+
+<div id="search_main">
+	<form action="http://gzgoogle.tk/search?q"  id="sform" target="_blank">
+  		<div id="search">
+    		<div class="jsSelect" id="Select">
+      			<ul>
+      				<li class="s">谷歌</li>
+      				<li id="google_s">谷歌</li>
+        			<li id="baidu_s">百度</li>
+       				<li id="sogou_s">必应</li>
+      			</ul>
+    		</div>
+    <input  name="q" type="text" value=""  autocomplete="off" id="inp" placeholder="">
+    		<div id="searchimg"></div>
+  		</div>
+   <!-- <input type="submit" value="搜素"  id="sure"/> -->
+	</form>
+</div>
+
 
 	<div class="navWrapper">
 		<ul>
@@ -176,7 +261,7 @@
 			
 		</ul>
 
-		<!-- 虾米音乐电台 -->
+			<!-- 虾米音乐电台 -->
 	<div class="xiamiRadio">
 		<object data="http://img.xiami.net/res/fm/xiamiRadio_20120612.swf?v=1428236788" type="application/x-shockwave-flash" width="695" height="300"  id="radioPlayer" name="radioPlayer">
 		<param name="movie" value="http://img.xiami.net/res/fm/xiamiRadio_20120612.swf?v=1428236788">
@@ -190,6 +275,8 @@
 
 
 
+		
+
 
 
 	</div>
@@ -198,9 +285,71 @@
 
 
 
+		<!-- 搜索引擎 -->
 
-
-
-	
+		<script>	$(document).ready(function(){
+		//$("#inp").focus();
+		$("body #Select").each(function(i){ 
+		i= i+1
+		this.id = "Select" + i; 
+		var SumimasenSelect = $("#Select"+i)
+		$(SumimasenSelect).find("ul li:first").hover(function(){
+			$(".s").css("background","url(http://7xpf5o.com1.z0.glb.clouddn.com/68_60.png) 0px 5px no-repeat");
+			$(this).parent("ul").css("height",150)
+			$(this).siblings("ul li:not(.s)").mouseenter(function(){
+				$(".s").css("background","url(http://7xpf5o.com1.z0.glb.clouddn.com/68_60.png) 0px 5px no-repeat");
+				$(this).css("background","#39f").css("color","#FFFFFF")
+			});
+			$(this).siblings("ul li:not(.s)").mouseleave(function(){
+				$(this).css("background","none").css("color","#A8A8A8")
+				$(".s").css("background","url(http://7xpf5o.com1.z0.glb.clouddn.com/68_60.png) 0px -25px no-repeat");
+			});
+			$(this).siblings("ul li:not(.s)").click(function(){
+				$(this).parent("ul").css("height",28)
+				var cdContent = $(this).text()
+				$(SumimasenSelect).find("ul li:first").text(cdContent)
+			});
+			$(this).parent(SumimasenSelect).mouseleave(function(){
+				$(this).css("height",28)
+			});
+			$("#soso_s").click(function(){
+			$("#inp").attr("name","w");
+			$("#sform").attr("action","http://www.soso.com/q");
+			$("#searchimg").css("background","url(images/50_70.PNG) 0px 0px");
+			});
+			$("#baidu_s").click(function(){
+			$("#inp").attr("name","wd");
+			$("#sform").attr("action","http://www.baidu.com/s");
+			$("#searchimg").css("background","url(http://7xpf5o.com1.z0.glb.clouddn.com/68_60.png) 0px -10px");
+			});
+			$("#google_s").click(function(){
+			$("#inp").attr("name","q");
+			$("#sform").attr("action","http://gzgoogle.tk/search?q");
+			$("#searchimg").css("background","url(http://7xpf5o.com1.z0.glb.clouddn.com/68_60.png) 0px -37px");
+			});
+			$("#sogou_s").click(function(){
+			$("#inp").attr("name","q");
+			$("#sform").attr("action","http://cn.bing.com/search" );
+			$("#searchimg").css("background","url(http://7xpf5o.com1.z0.glb.clouddn.com/68_60.png) 0px -23px");
+			});
+			$("#youdao_s").click(function(){
+			$("#inp").attr("name","q");
+			$("#sform").attr("action","http://www.youdao.com/search");
+			$("#searchimg").css("background","url(images/50_70.PNG) 0px -56px");
+			});
+			$("#wen_s").click(function(){
+			$("#sform").attr("action","http://wenwen.soso.com/z/Search.e?cid=w.q.in.sb.ww&ie=utf-8&sp=S")
+			});
+			$("#news_s").click(function(){
+			$("#sform").attr("action","http://news.soso.com/n.q")
+			});
+	});
+		
+		},function(){
+		$(".s").css("background","url(images/68_60.PNG) 0px -30px no-repeat");
+		
+	});
+	});
+</script>
 </body>
 </html>
