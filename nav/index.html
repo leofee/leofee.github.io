@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<title>nav</title>
 	<script src="http://www.w3school.com.cn/jquery/jquery-1.11.1.min.js"></script>
+
 	<style>
 		*{
 			margin:0;padding:0;
@@ -13,19 +14,6 @@
 			background-size:cover;
 		}
 		
-		/* .bg_img{
-			background:url(http://7xpf5o.com1.z0.glb.clouddn.com/bg_img02.png);
-			width:100%;
-			height:100%;
-			position:fixed;
-			top:0;
-			left:0;
-			z-index:-1;
-			background-size:cover;
-			background-position: center center;
-			background-attachment: fixed;
-			
-		}  */
 		.navWrapper li{
 			list-style: none;
 			padding:20px 0;
@@ -34,9 +22,11 @@
 			text-decoration:none;
 			
 		}
-		img{
+		p img{
 			border:0;
+			display:block;
 		}
+
 		.navTop{
 			width:100%;
 			height:70px;
@@ -48,7 +38,7 @@
 		}
 		
 		.peppermintCandy{
-			margin-left:265px;
+			margin-left:100px;
 			margin-top:22px;
 			width:100px;
 			height:30px;
@@ -66,8 +56,8 @@
 			clear:left;
 
 		}
-		.navWrapper img:hover{
-			-webkit-animation:circle 1s infinite linear;/*匀速 循环*/
+		/* .navWrapper img:hover{
+			animation:circle 1s infinite linear;匀速 循环
 		}
 		@keyframes circle{
 		0%{ transform:rotate(0deg); }
@@ -76,8 +66,8 @@
 		.navWrapper ul{
 			float:left;
 			padding:0 30px;
-		}
-		.xiamiRadio{
+		} */
+		/* .xiamiRadio{
 			width:654px;
 			height:150px;
 			border:4px solid #191919;
@@ -93,8 +83,23 @@
 			position:absolute;
 			top:-68px;
 			left:-12px;
+		} */
+		.doubanFM{
+			position:fixed;
+			top:50%;
+			left:0;
+			border:1px solid #ccc;
+			box-shadow: 0 2px 2px 0;
 		}
-
+		.doubanButton{
+			position:fixed;
+			bottom:50%;
+			left:0;
+			cursor:pointer;
+			border:1px solid #e6e6e6;
+			border-radius:0 5px 5px 0;
+			box-shadow: 0 1px 1px 0 ;
+		}
 
 		/*搜索引擎切换*/
 		
@@ -186,7 +191,13 @@
 			font-weight:bold;
 			color:#ffffff;font-family:microsoft yahei;">薄荷糖</span></a>
 			</div>
+		
 		</div>
+
+
+	<!-- JiaThis Button BEGIN -->
+	<script type="text/javascript" src="http://v3.jiathis.com/code_mini/jiathis_r.js?move=0&amp;btn=r2.gif" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
 	
 	<!-- 搜索引擎 -->
 		<!-- 谷歌搜索
@@ -221,48 +232,9 @@
 </div>
 
 
-	<div class="navWrapper">
-		<ul>
-
-			<li><a href="http://www.500px.com" target="_blank"><img src="http://7xpf5o.com1.z0.glb.clouddn.com/500px.png"/></a> </li> 
-			<li><a href="http://www.cnu.cc" target="_blank"><img src="http://7xpf5o.com1.z0.glb.clouddn.com/cnu%E8%A7%86%E8%A7%89%E8%81%94%E7%9B%9F.png"/></a> </li> 
-			<li><a href="http://www.behance.net" target="_blank"><img src="http://7xpf5o.com1.z0.glb.clouddn.com/Behance.png"/></a> </li> 
-			
-		</ul>
-		<ul>
-
-			<li><a href="http://gallerix.asia/" target="_blank"><img src="http://7xpf5o.com1.z0.glb.clouddn.com/Gallerix%20asia.png"/></a> </li> 
-			<li><a href="http://www.itechzero.com/google-mirror-sites-collect.html" target="_blank"><img src="http://7xpf5o.com1.z0.glb.clouddn.com/Google.png"/></a> </li> 
-			<li><a href="http://www.tuyiyi.com/hao/" target="_blank"><img src="http://7xpf5o.com1.z0.glb.clouddn.com/Inspiration.png"/></a> </li> 
-			<li><a href="http://reeoo.com/" target="_blank"><img src="http://7xpf5o.com1.z0.glb.clouddn.com/reeoo-logo-256.png"/></a> </li> 
-			
-		</ul>
-		<ul>
-
-			<li><a href="http://astrodoor.cc/index.jsp" target="_blank"><img src="http://7xpf5o.com1.z0.glb.clouddn.com/%E5%8D%A0%E6%98%9F%E4%B9%8B%E9%97%A8.png"/></a> </li> 
-			<li><a href="http://www.quora.com" target="_blank"><img src="http://7xpf5o.com1.z0.glb.clouddn.com/Quora.png"/></a> </li> 
-			<li><a href="http://www.iconfont.cn/" target="_blank"><img src="http://7xpf5o.com1.z0.glb.clouddn.com/Iconfont.png"/></a> </li> 
-			<li><a href="http://www.douban.com" target="_blank"><img src="http://7xpf5o.com1.z0.glb.clouddn.com/douBan.png"/></a> </li> 
-			
-		</ul>
-		<ul>
-
-			<li><a href="http://www.logopond.com" target="_blank"><img src="http://7xpf5o.com1.z0.glb.clouddn.com/logopond.png"/></a> </li> 
-			<li><a href="http://izquotes.com/" target="_blank"><img src="http://7xpf5o.com1.z0.glb.clouddn.com/IZQuotes.png"/></a> </li> 
-			<li><a href="http://user.qzone.qq.com/497051512/photo/V10zmUcM0nMxnI" target="_blank"><img src="http://7xpf5o.com1.z0.glb.clouddn.com/Qzone.png"/></a> </li> 
-			
-		</ul>
-		<ul>
-
-			<li><a href="http://www.runoob.com/" target="_blank"><img src="http://7xpf5o.com1.z0.glb.clouddn.com/Web.png"/></a> </li> 
-			<li><a href="http://www.qiniu.com" target="_blank"><img src="http://7xpf5o.com1.z0.glb.clouddn.com/qiniu.png"/></a> </li> 
-			<li><a href="http://www.github.com" target="_blank"><img src="http://7xpf5o.com1.z0.glb.clouddn.com/Github.png"/></a> </li>
-
-			
-		</ul>
-
+	
 			<!-- 虾米音乐电台 -->
-	<div class="xiamiRadio">
+	<!-- <div class="xiamiRadio">
 		<object data="http://img.xiami.net/res/fm/xiamiRadio_20120612.swf?v=1428236788" type="application/x-shockwave-flash" width="695" height="300"  id="radioPlayer" name="radioPlayer">
 		<param name="movie" value="http://img.xiami.net/res/fm/xiamiRadio_20120612.swf?v=1428236788">
 		<param name="quality" value="high">
@@ -270,8 +242,21 @@
 		<param name="allowScriptAccess" value="always">
 		<param name="FlashVars" value="dataUrl=http://www.xiami.com/radio/xml/type/4/id/8578928&helpUrl=http://www.xiami.com/websitehelp#help6_1&changeRadioUrl=http://www.xiami.com/radio&unlikeartist=1&amp;ctNum=20000&srNum=120">
 		</object>
-	</div>
+	</div> -->
+		
 
+     	<!-- 豆瓣FM -->
+		<p class="doubanFM"><iframe
+
+			name="iframe_canvas" src="http://douban.fm/partner/baidu/doubanradio"
+
+			scrolling="no" frameborder="0" width="390" height="160"  >
+
+		</iframe>
+		</p>
+		<div class="doubanButton">
+			<img src="http://7xpf5o.com1.z0.glb.clouddn.com/doubanFM2.png" width="66px" height="25px">
+		</div>
 
 
 
@@ -351,5 +336,28 @@
 	});
 	});
 </script>
+
+
+
+
+
+
+
+
+<!-- 豆瓣FM -->
+<script>
+$(".doubanFM").hide();
+$(".doubanButton").click(function(){
+	$(".doubanFM").toggle(800);
+});
+
+</script>
+
+
+
 </body>
 </html>
+
+
+
+
