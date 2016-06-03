@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<script type="text/javascript" src="http://www.w3school.com.cn/jquery/jquery-1.11.1.min.js"></script>
+<style>
+	.btn{
+		width: 50px;
+		height: 50px;
+		background: #000;
+	}
+	.box{
+		width: 100px;
+		height: 100px;
+		position:absolute;
+		top: 300px;
+		left: 0;
+		background: #ccc;
+	}
+	.btn1{
+		width: 50px;
+		height: 50px;
+		background: #000;
+	}
+</style>
+<body style="position:relative">
+	<div class="btn"></div><br>
+	<div class="btn1"></div>
+	<div class="box"></div>
+</body>
+<script type="text/javascript">
+$(function(){
+	var open=true;
+	$('.btn').click(function(){
+		if(open){
+			$('.box').stop(false,false).animate({'left':200},1000);
+			open=false;
+		}else{
+			$('.box').stop(false,false).animate({'left':0},1000);
+			open=true;
+		}
+	})
+	$('.btn1').click(function(){
+		if (!$('.box').is(":animated")) {
+			alert(1)
+		}
+	})
+	/*JQzhaun yuansheng*/
+	//$('.btn1')[0].style.backgroundColor='blue';
+	$('.btn1').get(0).style.backgroundColor='blue';
+})
+</script>
+</html>
