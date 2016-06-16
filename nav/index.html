@@ -4,6 +4,8 @@
 	<meta charset="UTF-8">
 	<title>nav</title>
 	<script src="//cdn.bootcss.com/jquery/3.0.0-rc1/jquery.min.js"></script>
+	<script type="text/javascript" src="jquery.min.js" tppabs="http://res.xiami.net/res/v3/js/jquery.min.js"></script>
+
 
 	<style>
 		
@@ -15,7 +17,8 @@
 			list-style: none;
 		}
 		html{
-			background:url(http://pic1.win4000.com/wallpaper/b/51f88137799e8.jpg) no-repeat center center fixed;
+			/*background:url(http://pic1.win4000.com/wallpaper/b/51f88137799e8.jpg) no-repeat center center fixed;*/
+			background:#676b71;
 			background-size:cover;
 			position:relative;
 		}
@@ -32,11 +35,12 @@
 		.navTop{
 			width:100%;
 			height:70px;
-			background:linear-gradient(to bottom,#3cbd77,#32b16c);
+			background:linear-gradient(to bottom,#676b71,#767676);
 			position:fixed;
 			left:0;
 			top:0;
 			z-index: 999;
+			box-shadow: 0 0 4px 0;
 		}
 		
 		.peppermintCandy{
@@ -49,25 +53,30 @@
 			border-top: none;
 			border-bottom:none;
 		}
-		
-		/* .xiamiRadio{
-			width:654px;
-			height:150px;
-			border:4px solid #191919;
-			clear:left;
+		#radioPlayer{
+			position:absolute;
+			left:-2px;
+			top:-2px;
+		}
+		.radioPlayerWrapper{
+			width:536px;height:282px;
 			overflow:hidden;
 			position:relative;
-			border-radius:10px;
-			margin-left:auto;
-			margin-right:auto;
-			margin-top:30px;
+			box-shadow:0 0 2px 0;
+			position:fixed;
+			left:-20px;
+			top:70px;
+			z-index: 1;
 		}
-		object{
-			position:absolute;
-			top:-68px;
-			left:-12px;
-		} */
-		.doubanFM{
+		.xiamiRadioImg{
+			margin-top:120px;
+			cursor:pointer;
+		
+
+			
+		}
+		
+/*		.doubanFM{
 			position:fixed;
 			bottom:184px;
 			left:0;
@@ -84,7 +93,7 @@
 			border-radius:5px;
 			box-shadow: 1px 1px 1px 1px ;
 			z-index: 99999;
-		}
+		}*/
 
 		/*搜索引擎切换*/
 		
@@ -153,7 +162,7 @@
 			width:980px;
 			background-color:#ffffff;
 			border-radius: 5px;
-			height:220%;
+			/*height:220%;*/
 			margin:0 auto;
 			margin-bottom:80px;
 			clear:left;
@@ -225,8 +234,12 @@
 			bottom:0;
 			height:80px;
 			width:100%;
-			background:#7ebec2;
-			margin-left:auto;
+			background:linear-gradient(to bottom,#676b71,#767676);
+			box-shadow: 4px 4px 4px 4px;
+			/*margin-left:auto;*/
+		}
+		footer a{
+			color:#e8e8e8;
 		}
 
 
@@ -242,23 +255,14 @@
 				font-weight:bold;
 				color:#ffffff;font-family:microsoft yahei;">薄荷糖</span></a>
 				</div>
-				<div style="position:absolute;right:-200px;top:0;margin-top:14px;"><img src="http://7xpf5o.com1.z0.glb.clouddn.com/logo.png" height="65%" width="65%"></div>
+				<div  style="position:absolute;top:10px;right:100px;"><img style="border-radius:25px;" src="http://7xpf5o.com1.z0.glb.clouddn.com/milo.png" height="50px" width="50px"></div>
 				
 		</div>
 	
-	<!-- 搜索引擎 -->
-		<!-- 谷歌搜索
- 			</form>
-
-				<form action="http://gzgoogle.tk/search?hl=zh-CN&q" target="_blank">
-
-    			<input class="googleSearch" placeholder="谷歌" autocomplete="off" type=text name=q size=40>
-
-    			<input class="googleSubmit" type="submit" value="百度一下">
-
- 			</form>
- -->
- 		<center><a href="https://muzhiso.wallpai.com/webhp?gws_rd=cr" target="_blank"><img src="http://7xpf5o.com1.z0.glb.clouddn.com/google%20doodle.gif" width="428px" height="169px" style="border-radius:10px; margin-top:120px;"></a></center>
+ 		<center>
+ 			<img class="xiamiRadioImg" src="http://7xpf5o.com1.z0.glb.clouddn.com/musicII.png" width="300px" height="300px">
+ 		
+ 		</center>
 
 	<div id="search_main">
 	<form action="https://muzhiso.wallpai.com/search"  id="sform" target="_blank">
@@ -281,19 +285,19 @@
 
 	
 			<!-- 虾米音乐电台 -->
-	<!-- <div class="xiamiRadio">
-		<object data="http://img.xiami.net/res/fm/xiamiRadio_20120612.swf?v=1428236788" type="application/x-shockwave-flash" width="695" height="300"  id="radioPlayer" name="radioPlayer">
-		<param name="movie" value="http://img.xiami.net/res/fm/xiamiRadio_20120612.swf?v=1428236788">
-		<param name="quality" value="high">
-		<param name="wmode" value="Opaque">
-		<param name="allowScriptAccess" value="always">
-		<param name="FlashVars" value="dataUrl=http://www.xiami.com/radio/xml/type/4/id/8578928&helpUrl=http://www.xiami.com/websitehelp#help6_1&changeRadioUrl=http://www.xiami.com/radio&unlikeartist=1&amp;ctNum=20000&srNum=120">
-		</object>
-	</div> -->
+			<div class="radioPlayerWrapper">
+			<object id="radioPlayer" type="application/x-shockwave-flash" width="540" height="285" style="position:absolute;border-radius:10px;">
+				<param name="movie" value="http://img.xiami.net/res/kuang/xiamikuang5tab.swf">
+				<param name="wmode" value="transparent">
+				<param name="allowScriptAccess" value="always">
+				<param name="FlashVars" value="rname=新歌&amp;dataUrl=http://www.xiami.com/kuang/xml/type/6/id/0&amp;ccnum=300&amp;recordNum=30">
+            </object>
+            </div>
+          
 		
 
      	<!-- 豆瓣FM -->
-		<p class="doubanFM"><iframe
+		<!-- <p class="doubanFM"><iframe
 		
 			name="iframe_canvas" src="http://douban.fm/partner/baidu/doubanradio"
 		
@@ -303,7 +307,7 @@
 		</p>
 		<div class="doubanButton">
 			<img src="http://7xpf5o.com1.z0.glb.clouddn.com/doubanFM2.png" width="66px" height="25px">
-		</div>
+		</div> -->
 		
 
 
@@ -662,69 +666,27 @@
 	                <a href="http://meg.chongbuluo.com/" target="_blank" ><li data-desc="各种福利下载">磁力下载
 						<div class="triangleUp"></div><div class="triangleUp" style="border-bottom: 10px solid #ffffff;bottom:9px;"></div>
 	                </li></a>
-	             	                
-				</ul>
-				<ul style="margin-top:24px;clear:left;">
-					 <a href="http://www.supfree.net/" target="_blank" ><li data-desc="各种在线查询">在线查询
+	                 <a href="http://www.supfree.net/" target="_blank" ><li data-desc="各种在线查询">在线查询
 						<div class="triangleUp"></div><div class="triangleUp" style="border-bottom: 10px solid #ffffff;bottom:9px;"></div>
 	                </li></a>
-				</ul>
-
+	             	                
+				
 				
 				
 		</div>
+		<div class="navPart1" style="overflow:hidden;">
+			<!-- <img src="http://7xpf5o.com1.z0.glb.clouddn.com/milo.png" width="300" height="300" style="" > -->
+			<img src="http://7xpf5o.com1.z0.glb.clouddn.com/aboutII.png" style="margin-left:545px;">
+		</div>
+	
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<img src="http://7xpf5o.com1.z0.glb.clouddn.com/jimi.png" style="position:absolute;right:0;bottom:0;z-index:9;">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-		
 
 	</div>
 		
 
 <!-- 以下是footer部分 -->
 	<footer>
-		<div style="width:980px;height:80px;margin:0 auto;color:#515151;font-size:12px;letter-spacing:1px;">
+		<div style="width:980px;height:80px;margin:0 auto;color:#e8e8e8;font-size:12px;letter-spacing:1px;">
 			<div style="line-height:80px;">©&nbsp2016&nbsp<a href="http://leofee.co">LeoFee</a>&nbsp&nbsp&nbsp&nbsp<em>你从远方来，我到远方去，遥远的路程经过这里</em>
 
 				<div style="float:right;padding:0 5px;"><a href="http://leofee.co/about">建议反馈</a>
@@ -848,14 +810,14 @@
 
 <!-- 豆瓣FM滑动效果-->
 	<script>
-	$(".doubanFM").hide();
-	$(".doubanButton").click(function(){
-	$(".doubanFM").toggle(800);
+	$(".radioPlayerWrapper").hide();
+	$(".xiamiRadioImg").click(function(){
+	$(".radioPlayerWrapper").toggle(800);
 	});
 
 	</script>
 
-<!-- 站长统计 -->
+
 
 
 
