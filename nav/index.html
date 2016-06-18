@@ -62,19 +62,24 @@
 			width:536px;height:282px;
 			overflow:hidden;
 			position:relative;
-			box-shadow:0 0 2px 0;
+			box-shadow:1px 1px 2px 0;
 			margin:0 auto;
 			margin-bottom:60px;
 			clear:left;
-			
+			margin-top:-100px;
+								
 		}
-		.xiamiRadioImg{
-			margin-top:130px;
-			cursor:pointer;
 		
-
-			
+		.xiamiRadio{
+			-webkit-animation:circle 5s infinite linear;
+			width:330px;
+			height:330px;
 		}
+		@-webkit-keyframes circle{
+		0%{ transform:rotate(0deg); }
+		100%{ transform:rotate(360deg); }
+		}
+
 		
 		.doubanFM{
 			
@@ -82,10 +87,23 @@
 			box-shadow: 0 4px 4px 0;
 			width:390px;
 			opacity:0.7;
-			margin:40px auto;
-			border-radius: 10px;
-
-			
+			margin:0 auto;
+			margin-top:-100px;
+			margin-bottom: 150px;
+												
+		}
+		#navBtn{
+			position:fixed;
+			right:40px;
+			bottom:0;
+		
+		}
+		.musicWrapper{
+			width:980px;
+			margin-top:160px;
+			margin-bottom: 120px;
+			margin-left:auto;
+			margin-right:auto;
 		}
 		
 
@@ -97,14 +115,16 @@
 		#search_main{
 		width:629px;
 		height:40px;
-		margin-left:auto;
-		margin-right:auto;
-		margin-top:40px;	
+		position: fixed;
+		right:50%;
+		left:325px;
+		top:16px;
+
 		}
 		#search {
 			width:550px;
 			height:36px;
-			border-radius:20px;
+			border-radius:1px;
 			background: #fff;
 			font-family:microsoft yahei;
 			margin:0 auto;
@@ -114,7 +134,7 @@
 			height:150px;
 			float:left;
 			display:inline;
-			margin-left:14px;
+			margin-left:px;
 		}
 		.jsSelect ul {
 			width:62px;
@@ -249,37 +269,44 @@
 				font-weight:bold;
 				color:#ffffff;font-family:microsoft yahei;">薄荷糖</span></a>
 				</div>
-				<div  style="position:absolute;top:10px;right:100px;"><img style="border-radius:25px;" src="http://7xpf5o.com1.z0.glb.clouddn.com/milo.png" height="50px" width="50px"></div>
+
+				<!-- 搜索框 -->
+						<div id="search_main">
+								<form action="https://muzhiso.wallpai.com/search"  id="sform" target="_blank">
+							  		<div id="search">
+							    		<div class="jsSelect" id="Select">
+							      			<ul>
+							      				<li class="s">谷歌</li>
+							      				<li id="google_s">谷歌</li>
+							        			<li id="baidu_s">百度</li>
+							       				<li id="sogou_s">必应</li>
+							      			</ul>
+							    		</div>
+							    <input  name="q" type="text" value=""  autocomplete="off" id="inp" placeholder="">
+							    		<div id="searchimg"></div>
+							  		</div>
+							   <!-- <input type="submit" value="搜素"  id="sure"/> -->
+								</form>
+						</div>
+
+
+
+
+
+
+				<div  id="SearchHideBtn" style="position:absolute;top:10px;right:120px;cursor:pointer;"><img style="border-radius:25px;" src="http://7xpf5o.com1.z0.glb.clouddn.com/milo.png" height="50px" width="50px"></div>
 				
 		</div>
 	
- 		<center>
- 			<img class="xiamiRadioImg" src="http://7xpf5o.com1.z0.glb.clouddn.com/Atlas%20TouchII.png" width="300px" height="300px">
-
  		
- 		</center>
 
-	<div id="search_main">
-	<form action="https://muzhiso.wallpai.com/search"  id="sform" target="_blank">
-  		<div id="search">
-    		<div class="jsSelect" id="Select">
-      			<ul>
-      				<li class="s">谷歌</li>
-      				<li id="google_s">谷歌</li>
-        			<li id="baidu_s">百度</li>
-       				<li id="sogou_s">必应</li>
-      			</ul>
-    		</div>
-    <input  name="q" type="text" value=""  autocomplete="off" id="inp" placeholder="">
-    		<div id="searchimg"></div>
-  		</div>
-   <!-- <input type="submit" value="搜素"  id="sure"/> -->
-	</form>
-	</div>
-	
+		
+	 			<div style="margin:0 auto;margin-top:120px;"><center><img class="xiamiRadioImg" style="cursor:pointer;" src="http://7xpf5o.com1.z0.glb.clouddn.com/Atlas%20TouchII.png" width="320px" height="320px"></center></div>
+	 	
 
 	
 			<!-- 虾米音乐电台 -->
+		<div class="musicWrapper">
 			<div class="radioPlayerWrapper">
 			<object id="radioPlayer" type="application/x-shockwave-flash" width="540" height="285" style="position:absolute;border-radius:10px;">
 				<param name="movie" value="http://img.xiami.net/res/kuang/xiamikuang5tab.swf">
@@ -292,19 +319,18 @@
 		
 
      	<!-- 豆瓣FM -->
-		<p class="doubanFM"><iframe
-		
-			name="iframe_canvas" src="http://douban.fm/partner/baidu/doubanradio"
-		
-			scrolling="no" frameborder="0" width="390" height="160"  >
-		
-		</iframe>
-		</p>
-
-		<center>
-			<img id="navBtn" src="http://7xpf5o.com1.z0.glb.clouddn.com/Atlas%20Touch.png" width="300px" height="300px" style="cursor:pointer;margin-bottom:100px;">
-		</center>
-		
+			<div  class="doubanFM"><iframe
+			
+				name="iframe_canvas" src="http://douban.fm/partner/baidu/doubanradio"
+			
+				scrolling="no" frameborder="0" width="390" height="160"  >
+			
+			</iframe>
+			</div>
+			
+				<img id="navBtn" src="http://7xpf5o.com1.z0.glb.clouddn.com/Atlas%20Touch.png" width="50px" height="50px" style="cursor:pointer;margin-bottom:80px;">
+			
+		</div>
 		
 
 
@@ -821,6 +847,20 @@
 	$("#navBtn").click(function(){
 		$(".main").slideToggle(800);
 	});
+
+	$("#search_main").hide();
+	$("#SearchHideBtn").click(function(){
+		$("#search_main").toggle(800);
+	});
+
+	$(document).ready(function(){
+		$(".xiamiRadioImg").mouseenter(function(){
+			$(".xiamiRadioImg").addClass("xiamiRadio")
+		})
+		$(".xiamiRadioImg").mouseleave(function(){
+			$(".xiamiRadioImg").removeClass("xiamiRadio")
+		})
+	})
 
 
 	</script>
