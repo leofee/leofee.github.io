@@ -3,197 +3,878 @@
 <head>
 	<meta charset="UTF-8">
 	<title>nav</title>
+	<script src="//cdn.bootcss.com/jquery/3.0.0-rc1/jquery.min.js"></script>
+	
+
+
 	<style>
-		*{
-			margin:0;padding:0;
+		
+		*, body {
+    		font-family: 'Hiragino Sans GB',Helvetica,Arial,sans-serif;
+    		margin:0;padding:0;
+		}
+		ul{
+			list-style: none;
+		}
+		html{
+			/*background:url(http://pic1.win4000.com/wallpaper/b/51f88137799e8.jpg) no-repeat center center fixed;*/
+			background:#676b71;
+			background-size:cover;
+			position:relative;
 		}
 		
-		.bg_img{
-			background:url(http://7xpf5o.com1.z0.glb.clouddn.com/bg_img02.png);
-			width:100%;
-			height:100%;
-			position:fixed;
-			top:0;
-			left:0;
-			z-index:-1;
-			background-size:cover;
-			
-		} 
-		li{
-			list-style: none;
-			padding:20px 0;
-		}
-		a{
+		 a{
 			text-decoration:none;
-			
+			color:#666666;
 		}
-		img{
+		p img{
+			border:0;
 			display:block;
+		}
+
+		.navTop{
+			width:100%;
+			height:70px;
+			background:linear-gradient(to bottom,#676b71,#767676);
+			position:fixed;
+			left:0;
+			top:0;
+			z-index: 999;
+			box-shadow: 0 0 4px 0;
 		}
 		
 		.peppermintCandy{
-			margin-left: auto;
-			margin-right:auto;
+			margin-left:100px;
+			margin-top:22px;
 			width:100px;
 			height:30px;
-			border:2px solid #ffffff;
 			text-align: center;
 			line-height:30px;
 			border-top: none;
 			border-bottom:none;
-			margin-top:60px;
 		}
-		.navWrapper{
-			width:700px;
-			margin-top:30px;
-			margin-right: auto;
-			margin-left:auto;
-
+		#radioPlayer{
+			position:absolute;
+			left:-2px;
+			top:-2px;
 		}
-		.navWrapper img:hover{
-			-webkit-animation:circle 1s infinite linear;/*匀速 循环*/
+		.radioPlayerWrapper{
+			width:536px;height:282px;
+			overflow:hidden;
+			position:relative;
+			box-shadow:1px 1px 2px 0;
+			margin:0 auto;
+			margin-bottom:60px;
+			clear:left;
+			margin-top:-100px;
+								
+		}
+		
+		.xiamiRadio{
+			-webkit-animation:circle 5s infinite linear;
+			width:330px;
+			height:330px;
 		}
 		@-webkit-keyframes circle{
 		0%{ transform:rotate(0deg); }
 		100%{ transform:rotate(360deg); }
 		}
-		.navWrapper ul{
-			float:left;
-			padding:0 30px;
+
+		
+		.doubanFM{
+			
+			/*border:1px solid #3e4042;*/
+			box-shadow: 0 4px 4px 0;
+			width:390px;
+			opacity:0.7;
+			margin:0 auto;
+			margin-top:-100px;
+			margin-bottom: 150px;
+												
 		}
-		.xiamiRadio{
-			width:654px;
-			height:150px;
-			border:4px solid #191919;
-			clear:left;
-			overflow:hidden;
-			position:relative;
-			border-radius:10px;
+		#navBtn{
+			position:fixed;
+			right:40px;
+			bottom:0;
+		
+		}
+		.musicWrapper{
+			width:980px;
+			margin-top:160px;
+			margin-bottom: 120px;
 			margin-left:auto;
 			margin-right:auto;
-			margin-top:30px;
-		}
-		object{
-			position:absolute;
-			top:-70px;
-			left:-12px;
-		}
-		form{
-			margin:0;
-			padding:0;
-			font-size:14px;
-			margin-top:36px;
-		}
-		input{
-			font-size:16px;
-			font-family: microsoft yahei;
-			outline:none;
-			border:0;
-			color:#1dc6a5;
-			text-indent:20px;
-			line-height:36px;
-		}
-		.baiduSearch{
-			width: 500px;
-			height:36px;
-			border-radius:20px;
-			
-		}
-		.baiduSubmit{
-			background-color:#ffffff;
-			border:0; 
-			width:100px;
-			height:36px;
-			background
 		}
 		
-	</style>
-</head>
-<body>
+
+		/*搜索引擎切换*/
+		
+		input, button, select, textarea {
+				outline:none;
+		}
+		#search_main{
+		width:629px;
+		height:40px;
+		position: fixed;
+		right:50%;
+		left:325px;
+		top:16px;
+
+		}
+		#search {
+			width:550px;
+			height:36px;
+			border-radius:1px;
+			background: #fff;
+			font-family:microsoft yahei;
+			margin:0 auto;
+		}
+		.jsSelect {
+			width:62px;
+			height:150px;
+			float:left;
+			display:inline;
+			margin-left:px;
+		}
+		.jsSelect ul {
+			width:62px;
+			height:36px;
+			overflow:hidden;
+			background:#FFF;
+			float:left;
+			position:absolute;
+		}
+		.jsSelect ul .s {
+			display:block;
+			cursor:default;
+			cursor:pointer;
+			color:#1dc6a5;
+			border:none;
+		}
+		.jsSelect ul li {
+			width:62px;
+			height:36px;
+			line-height:36px;
+			font-size: 16px;
+			font-weight: bold;
+			cursor:pointer;
+			text-align:center;
+			color:#1dc6a5;
+			border:none;
+		}
+		#inp {
+			width:410px;
+			height:36px;
+			background:none;
+			margin-left:2px;
+			font-size:16px;
+			border:none;
+			line-height:36px;
+			color:#1dc6a5;
+		}
+		.main{
+			width:980px;
+			background-color:#ffffff;
+			border-radius: 5px;
+			/*height:220%;*/
+			margin:0 auto;
+			margin-bottom:80px;
+			clear:left;
+			position:relative;
+
+		}
+
+		.navPart1{
+			width:944px;
+			padding:5px 18px;
+			clear:both;
+		/*	height:130px;*/
+
+		}
+		.navPart1 li{
+			float:left;
+			padding:20px 32px;
+			position:relative;
+			cursor:pointer;
+			
+		}
+		.navPart1 li:hover:after{
+			content:attr(data-desc);
+			position:absolute;
+			top:48px;
+			left:40px;
+			width:174px;
+			border:1px solid #ccc;
+			box-shadow:0px 1px 1px 0px #5d5d5d;
+			background-color:#ffffff;
+			font-size:12px;
+			padding:8px 8px;
+			color:#666666;
+			text-align:center;
+			line-height: 30px;
+			z-index: 99;
+		}
+		.navPart1 li:hover .triangleUp{
+			display:block;
+		}
+		.triangleUp{
+			position:absolute;
+			bottom:10px;
+			left:60px;
+			width: 0; 
+			height: 0; 
+			border-right: 10px solid transparent; 
+			border-bottom: 10px solid #afafaf; 
+			border-left: 10px solid transparent; 
+			display:none;
+			z-index: 999;
+		}
+		.navPart1 li:hover{
+			text-decoration:underline;
+			color:#ff5d8f;
+		}
+		.navTitle1{
+			font-size:20px;
+			color:#ff5d8f;
+			font-weight:bold;
+			font-family:microsoft yahei;
+			width:944px;
+			height:48px;
+			line-height:48px;
+			border-bottom:1px dashed #CCC;
+		}
+		footer{
+			position:absolute;
+			bottom:0;
+			height:80px;
+			width:100%;
+			background:linear-gradient(to bottom,#676b71,#767676);
+			box-shadow: 4px 4px 4px 4px;
+			/*margin-left:auto;*/
+		}
+		footer a{
+			color:#e8e8e8;
+		}
+
+
+		
+</style>
+	</head>
+	<body>
 	<!-- 背景大图 -->
 	<div class="bg_img"></div>
-<div>
-		<div class="peppermintCandy"><a href="http://leofee.co" target="_blank"><span style="font-size:28px;
-			font-weight:bold;
-			color:#ffffff;font-family:microsoft yahei;">薄荷糖</span></a>
+	<div>
+		<div class="navTop">
+				<div class="peppermintCandy"><a href="http://leofee.co" target="_blank"><span style="font-size:22px;
+				font-weight:bold;
+				color:#ffffff;font-family:microsoft yahei;">薄荷糖</span></a>
+				</div>
+
+				<!-- 搜索框 -->
+						<div id="search_main">
+								<form action="https://muzhiso.wallpai.com/search"  id="sform" target="_blank">
+							  		<div id="search">
+							    		<div class="jsSelect" id="Select">
+							      			<ul>
+							      				<li class="s">谷歌</li>
+							      				<li id="google_s">谷歌</li>
+							        			<li id="baidu_s">百度</li>
+							       				<li id="sogou_s">必应</li>
+							      			</ul>
+							    		</div>
+							    <input  name="q" type="text" value=""  autocomplete="off" id="inp" placeholder="">
+							    		<div id="searchimg"></div>
+							  		</div>
+							   <!-- <input type="submit" value="搜素"  id="sure"/> -->
+								</form>
+						</div>
+
+
+
+
+
+
+				<div  id="SearchHideBtn" style="position:absolute;top:10px;right:120px;cursor:pointer;"><img style="border-radius:25px;" src="http://7xpf5o.com1.z0.glb.clouddn.com/milo.png" height="50px" width="50px"></div>
+				
 		</div>
 	
-	<!-- 百度搜索 -->
+ 		
 
-		<center>
-			<form action="http://www.baidu.com/baidu" target="_blank">
-
-    			<input class="baiduSearch" placeholder="百度" autocomplete="off" type=text name=word size=40>
-
-    			<!-- <input class="baiduSubmit" type="submit" value="百度一下"> -->
-
- 			</form>
- 		</center>
-
-	<div class="navWrapper">
-		<ul>
-
-			<li><a href="http://www.500px.com" target="_blank"><img src="http://7xpf5o.com1.z0.glb.clouddn.com/500px.png"/></a> </li> 
-			<li><a href="http://www.cnu.cc" target="_blank"><img src="http://7xpf5o.com1.z0.glb.clouddn.com/cnu%E8%A7%86%E8%A7%89%E8%81%94%E7%9B%9F.png"/></a> </li> 
-			<li><a href="http://www.behance.net" target="_blank"><img src="http://7xpf5o.com1.z0.glb.clouddn.com/Behance.png"/></a> </li> 
-			
-		</ul>
-		<ul>
-
-			<li><a href="http://gallerix.asia/" target="_blank"><img src="http://7xpf5o.com1.z0.glb.clouddn.com/Gallerix%20asia.png"/></a> </li> 
-			<li><a href="http://www.itechzero.com/google-mirror-sites-collect.html" target="_blank"><img src="http://7xpf5o.com1.z0.glb.clouddn.com/Google.png"/></a> </li> 
-			<li><a href="http://www.tuyiyi.com/hao/" target="_blank"><img src="http://7xpf5o.com1.z0.glb.clouddn.com/Inspiration.png"/></a> </li> 
-			
-		</ul>
-		<ul>
-
-			<li><a href="http://astrodoor.cc/index.jsp" target="_blank"><img src="http://7xpf5o.com1.z0.glb.clouddn.com/%E5%8D%A0%E6%98%9F%E4%B9%8B%E9%97%A8.png"/></a> </li> 
-			<li><a href="http://www.quora.com" target="_blank"><img src="http://7xpf5o.com1.z0.glb.clouddn.com/Quora.png"/></a> </li> 
-			<li><a href="http://www.iconfont.cn/" target="_blank"><img src="http://7xpf5o.com1.z0.glb.clouddn.com/Iconfont.png"/></a> </li> 
-			<li><a href="http://www.douban.com" target="_blank"><img src="http://7xpf5o.com1.z0.glb.clouddn.com/douBan.png"/></a> </li> 
-			
-		</ul>
-		<ul>
-
-			<li><a href="http://www.logopond.com" target="_blank"><img src="http://7xpf5o.com1.z0.glb.clouddn.com/logopond.png"/></a> </li> 
-			<li><a href="http://izquotes.com/" target="_blank"><img src="http://7xpf5o.com1.z0.glb.clouddn.com/IZQuotes.png"/></a> </li> 
-			<li><a href="http://user.qzone.qq.com/497051512/photo/V10zmUcM0nMxnI" target="_blank"><img src="http://7xpf5o.com1.z0.glb.clouddn.com/Qzone.png"/></a> </li> 
-			
-		</ul>
-		<ul>
-
-			<li><a href="http://www.runoob.com/" target="_blank"><img src="http://7xpf5o.com1.z0.glb.clouddn.com/Web.png"/></a> </li> 
-			<li><a href="http://www.qiniu.com" target="_blank"><img src="http://7xpf5o.com1.z0.glb.clouddn.com/qiniu.png"/></a> </li> 
-			<li><a href="http://www.github.com" target="_blank"><img src="http://7xpf5o.com1.z0.glb.clouddn.com/Github.png"/></a> </li>
-
-			
-		</ul>
-
-		<!-- 虾米音乐电台 -->
-	<div class="xiamiRadio">
-		<object data="http://img.xiami.net/res/fm/xiamiRadio_20120612.swf?v=1428236788" type="application/x-shockwave-flash" width="695" height="300"  id="radioPlayer" name="radioPlayer">
-		<param name="movie" value="http://img.xiami.net/res/fm/xiamiRadio_20120612.swf?v=1428236788">
-		<param name="quality" value="high">
-		<param name="wmode" value="Opaque">
-		<param name="allowScriptAccess" value="always">
-		<param name="FlashVars" value="dataUrl=http://www.xiami.com/radio/xml/type/4/id/8578928&helpUrl=http://www.xiami.com/websitehelp#help6_1&changeRadioUrl=http://www.xiami.com/radio&unlikeartist=1&amp;ctNum=20000&srNum=120">
-		</object>
-	</div>
-
-
-
-
-
-
-	</div>
-	
-</div>
-
-
-
-
-
+		
+	 			<div style="margin:0 auto;margin-top:120px;"><center><img class="xiamiRadioImg" style="cursor:pointer;" src="http://7xpf5o.com1.z0.glb.clouddn.com/Atlas%20TouchII.png" width="320px" height="320px"></center></div>
+	 	
 
 	
+			<!-- 虾米音乐电台 -->
+		<div class="musicWrapper">
+			<div class="radioPlayerWrapper">
+			<object id="radioPlayer" type="application/x-shockwave-flash" width="540" height="285" style="position:absolute;border-radius:10px;">
+				<param name="movie" value="http://img.xiami.net/res/kuang/xiamikuang5tab.swf">
+				<param name="wmode" value="transparent">
+				<param name="allowScriptAccess" value="always">
+				<param name="FlashVars" value="rname=新歌&amp;dataUrl=http://www.xiami.com/kuang/xml/type/6/id/0&amp;ccnum=300&amp;recordNum=30">
+            </object>
+            </div>
+          
+		
+
+     	<!-- 豆瓣FM -->
+			<div  class="doubanFM"><iframe
+			
+				name="iframe_canvas" src="http://douban.fm/partner/baidu/doubanradio"
+			
+				scrolling="no" frameborder="0" width="390" height="160"  >
+			
+			</iframe>
+			</div>
+			
+				<img id="navBtn" src="http://7xpf5o.com1.z0.glb.clouddn.com/Atlas%20Touch.png" width="50px" height="50px" style="cursor:pointer;margin-bottom:80px;">
+			
+		</div>
+		
+
+
+
+	<!-- 以下是导航 -->
+	<div class="main">
+		<div class="navPart1">
+			<div class="navTitle1"><img src="http://7xpf5o.com1.z0.glb.clouddn.com/musicIcon01.png" width="16px" height="16px" style="padding-right:8px;">爱音乐</div>
+			
+				<ul style="margin-top:24px;">
+					<a href="https://douban.fm/" target="_blank" ><li data-desc="与喜欢的音乐不期而遇">豆瓣FM(新)
+						<div class="triangleUp"></div><div class="triangleUp" style="border-bottom: 10px solid #ffffff;bottom:9px;"></div>
+					</li></a>
+					<a href="https://douban.fm/radio" target="_blank" ><li data-desc="与喜欢的音乐不期而遇">豆瓣FM(旧)
+						<div class="triangleUp"></div><div class="triangleUp" style="border-bottom: 10px solid #ffffff;bottom:9px;"></div>
+					</li></a>
+	                <a href="http://www.xiami.com/" target="_blank" ><li data-desc="乐随心动">虾米音乐
+						<div class="triangleUp"></div><div class="triangleUp" style="border-bottom: 10px solid #ffffff;bottom:9px;"></div>
+	                </li></a>
+	                <a href="http://music.163.com/" target="_blank" ><li data-desc="听见好时光">网易云音乐
+						<div class="triangleUp"></div><div class="triangleUp" style="border-bottom: 10px solid #ffffff;bottom:9px;"></div>
+	                </li></a>
+	                <a href="http://www.luoo.net/" target="_blank" ><li data-desc="落在低处">落网
+						<div class="triangleUp"></div><div class="triangleUp" style="border-bottom: 10px solid #ffffff;bottom:9px;"></div>
+	                </li></a>
+	                <a href="http://www.mtyyw.com/" target="_blank" ><li data-desc="我没法像个农民那样善良，只是麦子还在对着太阳生长">麦田
+						<div class="triangleUp"></div><div class="triangleUp" style="border-bottom: 10px solid #ffffff;bottom:9px;"></div>
+	                </li></a>
+				</ul>
+		</div>
+
+
+
+
+
+		<!-- 知识 -->
+		<div class="navPart1">
+			<div class="navTitle1"><img src="http://7xpf5o.com1.z0.glb.clouddn.com/bookicon.png" width="16px" height="16px" style="padding-right:8px;">爱知识</div>
+			
+				<ul style="margin-top:24px;">
+					<a href="https://book.douban.com/" target="_blank" ><li data-desc="让读过的书为你指路">豆瓣读书
+						<div class="triangleUp"></div><div class="triangleUp" style="border-bottom: 10px solid #ffffff;bottom:9px;"></div>
+					</li></a>
+					<a href="https://en.wikipedia.org/wiki/Main_Page" target="_blank" ><li data-desc="英文维基"> Wikipedia
+						<div class="triangleUp"></div><div class="triangleUp" style="border-bottom: 10px solid #ffffff;bottom:9px;"></div>
+					</li></a>
+	                <a href="http://cosmoscape.com/" target="_blank" ><li data-desc="天文科普爱好者网站，有天文大图">星空天文网
+						<div class="triangleUp"></div><div class="triangleUp" style="border-bottom: 10px solid #ffffff;bottom:9px;"></div>
+	                </li></a>
+	                <a href="http://www.freehoro.net/Astrolog32_GB/" target="_blank" ><li data-desc="认识你自己">星盘
+						<div class="triangleUp"></div><div class="triangleUp" style="border-bottom: 10px solid #ffffff;bottom:9px;"></div>
+	                </li></a>
+	                <a href="https://www.wdl.org/zh/" target="_blank" ><li data-desc="免费提供源于世界各地各文化的重要原始材料">世界数字图书馆
+						<div class="triangleUp"></div><div class="triangleUp" style="border-bottom: 10px solid #ffffff;bottom:9px;"></div>
+	                </li></a>
+	              
+
+				</ul>
+
+			<ul style="margin-top:24px;">
+					<a href="https://zh.wikisource.org/wiki/Wikisource:%E9%A6%96%E9%A1%B5" target="_blank" ><li data-desc="各种维基">维基文库
+						<div class="triangleUp"></div><div class="triangleUp" style="border-bottom: 10px solid #ffffff;bottom:9px;"></div>
+					</li></a>
+
+					<a href="https://www.zhihu.com/" target="_blank" ><li data-desc="知乎者也，不亦乐乎">知乎
+						<div class="triangleUp"></div><div class="triangleUp" style="border-bottom: 10px solid #ffffff;bottom:9px;"></div>
+					</li></a>
+
+	                <a href="http://www.gushiwen.org/" target="_blank" ><li data-desc="全是古诗词">古诗词网
+						<div class="triangleUp"></div><div class="triangleUp" style="border-bottom: 10px solid #ffffff;bottom:9px;"></div>
+	                </li></a>
+
+	                <a href="http://www.zdic.net/" target="_blank" ><li data-desc="字、词、词组、成语词典">汉典
+						<div class="triangleUp"></div><div class="triangleUp" style="border-bottom: 10px solid #ffffff;bottom:9px;"></div>
+	                </li></a>
+	                
+	                <a href="http://www.nasa.gov/multimedia/imagegallery/iotd.html" target="_blank" ><li data-desc="NASA官网太空图片">NASA官网
+						<div class="triangleUp"></div><div class="triangleUp" style="border-bottom: 10px solid #ffffff;bottom:9px;"></div>
+	                </li></a>
+
+	                <a href="https://www.quora.com/" target="_blank" ><li data-desc="The best answer to any question">Quora
+						<div class="triangleUp"></div><div class="triangleUp" style="border-bottom: 10px solid #ffffff;bottom:9px;"></div>
+	                </li></a>
+
+	                <a href="http://dashulin.com/" target="_blank" ><li data-desc="非常好的植物百科网站">大树林
+						<div class="triangleUp"></div><div class="triangleUp" style="border-bottom: 10px solid #ffffff;bottom:9px;"></div>
+	                </li></a>
+
+	                <a href="https://shuge.org/" target="_blank" ><li data-desc="有品格的数字古籍图书馆">书格
+						<div class="triangleUp"></div><div class="triangleUp" style="border-bottom: 10px solid #ffffff;bottom:9px;"></div>
+	                </li></a>
+
+	                <a href="http://izquotes.com/" target="_blank" ><li data-desc="名人名言">izQuotes
+						<div class="triangleUp"></div><div class="triangleUp" style="border-bottom: 10px solid #ffffff;bottom:9px;"></div>
+	                </li></a>
+				</ul>
+
+		</div>
+
+		<!-- 电影 -->
+		<div class="navPart1">
+			<div class="navTitle1"><img src="http://7xpf5o.com1.z0.glb.clouddn.com/film_reel_heart_32px_1111954_easyicon.net.ico" width="18px" height="18px" style="padding-right:8px;">爱电影</div>
+			
+				<ul style="margin-top:24px;">
+					<a href="https://movie.douban.com/" target="_blank" ><li data-desc="'电影的发明，让人的 生命至少延长了三倍'">豆瓣电影
+						<div class="triangleUp"></div><div class="triangleUp" style="border-bottom: 10px solid #ffffff;bottom:9px;"></div>
+					</li></a>
+					<a href="http://www.bilibili.com/" target="_blank" ><li data-desc="B站不仅仅有动画">BiliBili
+						<div class="triangleUp"></div><div class="triangleUp" style="border-bottom: 10px solid #ffffff;bottom:9px;"></div>
+					</li></a>
+
+	                <a href="http://www.acfun.tv/" target="_blank" ><li data-desc="AB双站，基本可以满足在线看电影">AcFun
+						<div class="triangleUp"></div><div class="triangleUp" style="border-bottom: 10px solid #ffffff;bottom:9px;"></div>
+	                </li></a>
+
+	                 <a href="http://www.ttmeiju.com/" target="_blank" ><li data-desc="看美剧必备">天天美剧
+						<div class="triangleUp"></div><div class="triangleUp" style="border-bottom: 10px solid #ffffff;bottom:9px;"></div>
+	                </li></a>
+	                
+	                
+				</ul>
+		</div>
+
+
+
+		<!-- 爱阅图 -->
+		<div class="navPart1">
+			<div class="navTitle1"><img src="http://7xpf5o.com1.z0.glb.clouddn.com/picture.png" width="18px" height="18px" style="padding-right:8px;">爱阅图</div>
+			
+				<ul style="margin-top:24px;">
+					<a href="https://500px.com/" target="_blank" ><li data-desc="最出色的摄影社区">500PX
+						<div class="triangleUp"></div><div class="triangleUp" style="border-bottom: 10px solid #ffffff;bottom:9px;"></div>
+					</li></a>
+
+					<a href="http://www.cnu.cc/" target="_blank" ><li data-desc="专业性视觉网站">CNU视觉联盟
+						<div class="triangleUp"></div><div class="triangleUp" style="border-bottom: 10px solid #ffffff;bottom:9px;"></div>
+					</li></a>
+
+	                <a href="http://www.kdatu.com/" target="_blank" ><li data-desc="分享高清大图">看大图
+						<div class="triangleUp"></div><div class="triangleUp" style="border-bottom: 10px solid #ffffff;bottom:9px;"></div>
+	                </li></a>
+
+	                <a href="http://www.ss.net.tw/" target="_blank" ><li data-desc="一个高品质的网络画廊">名画档案
+						<div class="triangleUp"></div><div class="triangleUp" style="border-bottom: 10px solid #ffffff;bottom:9px;"></div>
+	                </li></a>
+
+	                 <a href="http://gallerix.asia/" target="_blank" ><li data-desc="网站里有16万多幅世界名画">Gallerix.Asia
+						<div class="triangleUp"></div><div class="triangleUp" style="border-bottom: 10px solid #ffffff;bottom:9px;"></div>
+	                </li></a>
+
+	                 <a href="http://www.padmag.cn/" target="_blank" ><li data-desc="网络视觉艺术">PADMAG
+						<div class="triangleUp"></div><div class="triangleUp" style="border-bottom: 10px solid #ffffff;bottom:9px;"></div>
+	                </li></a>
+	                
+				</ul>
+		</div>
+
+		<!-- 图库 -->
+		<div class="navPart1">
+			<div class="navTitle1"><img src="http://7xpf5o.com1.z0.glb.clouddn.com/picture.png" width="18px" height="18px" style="padding-right:8px;">图库</div>
+			
+				<ul style="margin-top:24px;">
+					<a href="https://www.pexels.com/" target="_blank" ><li data-desc="free stock photos ">Pexels
+						<div class="triangleUp"></div><div class="triangleUp" style="border-bottom: 10px solid #ffffff;bottom:9px;"></div>
+					</li></a>
+
+					<a href="https://alpha.wallhaven.cc/" target="_blank" ><li data-desc="顾名思义 壁纸天堂">Wallhaven
+						<div class="triangleUp"></div><div class="triangleUp" style="border-bottom: 10px solid #ffffff;bottom:9px;"></div>
+					</li></a>
+
+	                <a href="http://www.lifeofpix.com/" target="_blank" ><li data-desc="真的是高清大图 免费下载">Life Of Pix
+						<div class="triangleUp"></div><div class="triangleUp" style="border-bottom: 10px solid #ffffff;bottom:9px;"></div>
+	                </li></a>
+
+	                <a href="http://magdeleine.co/browse/" target="_blank" ><li data-desc="高清大图">Magdeleine
+						<div class="triangleUp"></div><div class="triangleUp" style="border-bottom: 10px solid #ffffff;bottom:9px;"></div>
+	                </li></a>
+
+	                 <a href="https://unsplash.com/" target="_blank" ><li data-desc="还是大图">Unsplash
+						<div class="triangleUp"></div><div class="triangleUp" style="border-bottom: 10px solid #ffffff;bottom:9px;"></div>
+	                </li></a>
+
+	                 <a href="http://wallpapershome.com/" target="_blank" ><li data-desc="国外壁纸之家">Wallpaperhome
+						<div class="triangleUp"></div><div class="triangleUp" style="border-bottom: 10px solid #ffffff;bottom:9px;"></div>
+	                </li></a>
+	                
+				</ul>
+
+				<ul style="margin-top:24px;">
+					<a href="http://eput.com/" target="_blank" ><li data-desc="国内摄影图片分享 ">Eput
+						<div class="triangleUp"></div><div class="triangleUp" style="border-bottom: 10px solid #ffffff;bottom:9px;"></div>
+					</li></a>
+
+					<a href="http://butdoesitfloat.com/" target="_blank" ><li data-desc="free stock photos ">Butdoesitfloat
+						<div class="triangleUp"></div><div class="triangleUp" style="border-bottom: 10px solid #ffffff;bottom:9px;"></div>
+					</li></a>
+
+					<a href="http://photo.naver.com/" target="_blank" ><li data-desc="韩国摄影网站 ">Naver
+						<div class="triangleUp"></div><div class="triangleUp" style="border-bottom: 10px solid #ffffff;bottom:9px;"></div>
+					</li></a>
+
+					<a href="http://www.stockvault.net/" target="_blank" ><li data-desc="高清大图 ">Stockvault
+						<div class="triangleUp"></div><div class="triangleUp" style="border-bottom: 10px solid #ffffff;bottom:9px;"></div>
+					</li></a>
+
+					<a href="http://illusion.scene360.com/" target="_blank" ><li data-desc="概念艺术杂志 ">Illusion
+						<div class="triangleUp"></div><div class="triangleUp" style="border-bottom: 10px solid #ffffff;bottom:9px;"></div>
+					</li></a>
+
+					<a href="http://qzone.qq.com/" target="_blank" ><li data-desc="我的私人图库">Qzone
+						<div class="triangleUp"></div><div class="triangleUp" style="border-bottom: 10px solid #ffffff;bottom:9px;"></div>
+					</li></a>
+				</ul>
+		</div>
+
+
+
+
+		<!-- 设计 -->
+		<div class="navPart1">
+			<div class="navTitle1"><img src="http://7xpf5o.com1.z0.glb.clouddn.com/design_analysis_32px_1124009_easyicon.net.png" width="18px" height="18px" style="padding-right:8px;">爱设计</div>
+			
+				<ul style="margin-top:24px;">
+					<a href="https://www.behance.net/" target="_blank" ><li data-desc="展示和发现创意作品">Behance
+						<div class="triangleUp"></div><div class="triangleUp" style="border-bottom: 10px solid #ffffff;bottom:9px;"></div>
+					</li></a>
+
+					<a href="https://dribbble.com/" target="_blank" ><li data-desc="Dribbble is show and tell for designers.">Dribble
+						<div class="triangleUp"></div><div class="triangleUp" style="border-bottom: 10px solid #ffffff;bottom:9px;"></div>
+					</li></a>
+
+	                <a href="http://reeoo.com/" target="_blank" ><li data-desc="国外网站，APP欣赏">Reeoo
+						<div class="triangleUp"></div><div class="triangleUp" style="border-bottom: 10px solid #ffffff;bottom:9px;"></div>
+	                </li></a>
+
+	                <a href="http://www.poocg.com/" target="_blank" ><li data-desc="插画社区">涂鸦王国
+						<div class="triangleUp"></div><div class="triangleUp" style="border-bottom: 10px solid #ffffff;bottom:9px;"></div>
+	                </li></a>
+
+	                 <a href="http://www.tuyiyi.com/hao/" target="_blank" ><li data-desc="关于设计的导航网站">设计导航
+						<div class="triangleUp"></div><div class="triangleUp" style="border-bottom: 10px solid #ffffff;bottom:9px;"></div>
+	                </li></a>
+
+	                 <a href="http://muuuuu.org/" target="_blank" ><li data-desc="日本网站欣赏">MUUUUU
+						<div class="triangleUp"></div><div class="triangleUp" style="border-bottom: 10px solid #ffffff;bottom:9px;"></div>
+	                </li></a>
+
+	                <a href="http://www.gdweb.co.kr/" target="_blank" ><li data-desc="韩国网站欣赏">GDWEB
+						<div class="triangleUp"></div><div class="triangleUp" style="border-bottom: 10px solid #ffffff;bottom:9px;"></div>
+	                </li></a>
+
+	                
+
+	          
+	                
+				</ul>
+
+				<ul style="margin-top:24px;clear:left;">
+
+					
+
+	                <a href="http://4db.cc/" target="_blank" ><li data-desc="日本网站欣赏">4DB
+						<div class="triangleUp"></div><div class="triangleUp" style="border-bottom: 10px solid #ffffff;bottom:9px;"></div>
+	                </li></a>
+
+	                <a href="https://logopond.com/" target="_blank" ><li data-desc="logo设计">Logopond
+						<div class="triangleUp"></div><div class="triangleUp" style="border-bottom: 10px solid #ffffff;bottom:9px;"></div>
+	                </li></a>
+
+	                <a href="http://nipponcolors.com/" target="_blank" ><li data-desc="日本传统色彩">Nipponcolors
+						<div class="triangleUp"></div><div class="triangleUp" style="border-bottom: 10px solid #ffffff;bottom:9px;"></div>
+	                </li></a>
+
+	                <a href="http://www.qiuziti.com/" target="_blank" ><li data-desc="找字体 不求人">求字体
+						<div class="triangleUp"></div><div class="triangleUp" style="border-bottom: 10px solid #ffffff;bottom:9px;"></div>
+	                </li></a>
+
+	                <a href="http://www.easyicon.net/" target="_blank" ><li data-desc="找图标">Easyicon
+						<div class="triangleUp"></div><div class="triangleUp" style="border-bottom: 10px solid #ffffff;bottom:9px;"></div>
+	                </li></a>
+
+	                <a href="https://icons8.com/" target="_blank" ><li data-desc="找图标">Icons8
+						<div class="triangleUp"></div><div class="triangleUp" style="border-bottom: 10px solid #ffffff;bottom:9px;"></div>
+	                </li></a>
+
+	                 <a href="http://www.flaticon.com/" target="_blank" ><li data-desc="还是找图标">Flaticon
+						<div class="triangleUp"></div><div class="triangleUp" style="border-bottom: 10px solid #ffffff;bottom:9px;"></div>
+	                </li></a>
+	                
+	                
+				</ul>
+		</div>
+
+	
+
+			<!--爱前端  -->
+		<div class="navPart1">
+			<div class="navTitle1"><img src="http://7xpf5o.com1.z0.glb.clouddn.com/application_code_html_xml_32px_1541_easyicon.net.png" width="18px" height="18px" style="padding-right:8px;">爱前端</div>
+			
+				<ul style="margin-top:24px;">
+					<a href="http://www.w3school.com.cn/index.html" target="_blank" ><li data-desc="领先的 Web 技术教程 ">W3school
+						<div class="triangleUp"></div><div class="triangleUp" style="border-bottom: 10px solid #ffffff;bottom:9px;"></div>
+					</li></a>
+
+					<a href="http://www.runoob.com/" target="_blank" ><li data-desc="前端基础教程">Runoob
+						<div class="triangleUp"></div><div class="triangleUp" style="border-bottom: 10px solid #ffffff;bottom:9px;"></div>
+					</li></a>
+
+	                <a href="https://github.com/" target="_blank" ><li data-desc="Build software better, together">Github
+						<div class="triangleUp"></div><div class="triangleUp" style="border-bottom: 10px solid #ffffff;bottom:9px;"></div>
+	                </li></a>
+
+	                <a href="http://www.w3cdream.com/" target="_blank" ><li data-desc="读懂移动互联网&未来">W3cdream
+						<div class="triangleUp"></div><div class="triangleUp" style="border-bottom: 10px solid #ffffff;bottom:9px;"></div>
+	                </li></a>
+
+	                 <a href="http://www.001daima.com/" target="_blank" ><li data-desc="淘宝css特效代码">码工助手
+						<div class="triangleUp"></div><div class="triangleUp" style="border-bottom: 10px solid #ffffff;bottom:9px;"></div>
+	                </li></a>
+
+	                 <a href="http://www.bootcss.com/" target="_blank" ><li data-desc="关于Bootstrap">Bootcss
+						<div class="triangleUp"></div><div class="triangleUp" style="border-bottom: 10px solid #ffffff;bottom:9px;"></div>
+	                </li></a>
+	                
+				</ul>
+
+				<ul style="margin-top:24px;clear:left;">
+						 <a href="http://www.stackoverflow.com/" target="_blank" ><li data-desc="全世界的程序员都喜欢在这问问题">Stackoverflow
+						<div class="triangleUp"></div><div class="triangleUp" style="border-bottom: 10px solid #ffffff;bottom:9px;"></div>
+	                </li></a>
+
+	                 <a href="https://www.codecademy.com/learn" target="_blank" ><li data-desc="代码学院 学习代码好帮手">Codecademy
+						<div class="triangleUp"></div><div class="triangleUp" style="border-bottom: 10px solid #ffffff;bottom:9px;"></div>
+	                </li></a>
+					
+
+				</ul>
+				
+		</div>
+
+
+		<!-- 搜索/下载 -->
+
+		<div class="navPart1">
+			<div class="navTitle1"><img src="http://7xpf5o.com1.z0.glb.clouddn.com/search_153.09937888199px_1201323_easyicon.net.png" width="18px" height="18px" style="padding-right:8px;">搜索/下载</div>
+			
+				<ul style="margin-top:24px;">
+					<a href="http://www.itechzero.com/google-mirror-sites-collect.html" target="_blank" ><li data-desc="谷歌镜像站搜集 ">谷歌镜像
+						<div class="triangleUp"></div><div class="triangleUp" style="border-bottom: 10px solid #ffffff;bottom:9px;"></div>
+					</li></a>
+
+					<a href="http://so.chongbuluo.com/" target="_blank" ><li data-desc="虫部落搜索">快搜
+						<div class="triangleUp"></div><div class="triangleUp" style="border-bottom: 10px solid #ffffff;bottom:9px;"></div>
+					</li></a>
+
+	                <a href="http://meg.chongbuluo.com/" target="_blank" ><li data-desc="各种福利下载">磁力下载
+						<div class="triangleUp"></div><div class="triangleUp" style="border-bottom: 10px solid #ffffff;bottom:9px;"></div>
+	                </li></a>
+	                 <a href="http://www.supfree.net/" target="_blank" ><li data-desc="各种在线查询">在线查询
+						<div class="triangleUp"></div><div class="triangleUp" style="border-bottom: 10px solid #ffffff;bottom:9px;"></div>
+	                </li></a>
+	             	                
+				
+				
+				
+		</div>
+		<div class="navPart1" style="overflow:hidden;">
+			<!-- <img src="http://7xpf5o.com1.z0.glb.clouddn.com/milo.png" width="300" height="300" style="" > -->
+			<img src="http://7xpf5o.com1.z0.glb.clouddn.com/aboutII.png" style="margin-left:545px;">
+		</div>
+	
+
+
+	</div>
+		
+
+<!-- 以下是footer部分 -->
+	<footer>
+		<div style="width:980px;height:80px;margin:0 auto;color:#e8e8e8;font-size:12px;letter-spacing:1px;">
+			<div style="line-height:80px;">©&nbsp2016&nbsp<a href="http://leofee.co">LeoFee</a>&nbsp&nbsp&nbsp&nbsp<em>你从远方来，我到远方去，遥远的路程经过这里</em>
+
+				<div style="float:right;padding:0 5px;"><a href="http://leofee.co/about">建议反馈</a>
+				<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1259471804'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1259471804%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
+
+				</div>
+				<div style="float:right;padding:0 5px;"><a  href="http://leofee.co/about">关于作者</a></div>
+				<div  style="float:right;padding:0 5px;"><a  href="http://leofee.co">阿飞的博客</a>
+				</div>
+
+			
+			</div>
+
+		</div>
+
+
+
+
+	</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<!-- 以下是js代码 -->
+	<!-- 搜索引擎 -->
+
+	<script>	$(document).ready(function(){
+		//$("#inp").focus();
+		$("body #Select").each(function(i){ 
+		i= i+1
+		this.id = "Select" + i; 
+		var SumimasenSelect = $("#Select"+i)
+		$(SumimasenSelect).find("ul li:first").hover(function(){
+			$(".s").css("background","url(http://7xpf5o.com1.z0.glb.clouddn.com/68_60.png) 0px 5px no-repeat");
+			$(this).parent("ul").css("height",150)
+			$(this).siblings("ul li:not(.s)").mouseenter(function(){
+				$(".s").css("background","url(http://7xpf5o.com1.z0.glb.clouddn.com/68_60.png) 0px 5px no-repeat");
+				$(this).css("background","#39f").css("color","#FFFFFF")
+			});
+			$(this).siblings("ul li:not(.s)").mouseleave(function(){
+				$(this).css("background","none").css("color","#A8A8A8")
+				$(".s").css("background","url(http://7xpf5o.com1.z0.glb.clouddn.com/68_60.png) 0px -25px no-repeat");
+			});
+			$(this).siblings("ul li:not(.s)").click(function(){
+				$(this).parent("ul").css("height",28)
+				var cdContent = $(this).text()
+				$(SumimasenSelect).find("ul li:first").text(cdContent)
+			});
+			$(this).parent(SumimasenSelect).mouseleave(function(){
+				$(this).css("height",28)
+			});
+			$("#soso_s").click(function(){
+			$("#inp").attr("name","w");
+			$("#sform").attr("action","http://www.soso.com/q");
+			$("#searchimg").css("background","url(images/50_70.PNG) 0px 0px");
+			});
+			$("#baidu_s").click(function(){
+			$("#inp").attr("name","wd");
+			$("#sform").attr("action","http://www.baidu.com/s");
+			$("#searchimg").css("background","url(http://7xpf5o.com1.z0.glb.clouddn.com/68_60.png) 0px -10px");
+			});
+			$("#google_s").click(function(){
+			$("#inp").attr("name","q");
+			$("#sform").attr("action","https://muzhiso.wallpai.com/search");
+			$("#searchimg").css("background","url(http://7xpf5o.com1.z0.glb.clouddn.com/68_60.png) 0px -37px");
+			});
+			$("#sogou_s").click(function(){
+			$("#inp").attr("name","q");
+			$("#sform").attr("action","http://cn.bing.com/search" );
+			$("#searchimg").css("background","url(http://7xpf5o.com1.z0.glb.clouddn.com/68_60.png) 0px -23px");
+			});
+			$("#youdao_s").click(function(){
+			$("#inp").attr("name","q");
+			$("#sform").attr("action","http://www.youdao.com/search");
+			$("#searchimg").css("background","url(images/50_70.PNG) 0px -56px");
+			});
+			$("#wen_s").click(function(){
+			$("#sform").attr("action","http://wenwen.soso.com/z/Search.e?cid=w.q.in.sb.ww&ie=utf-8&sp=S")
+			});
+			$("#news_s").click(function(){
+			$("#sform").attr("action","http://news.soso.com/n.q")
+			});
+	});
+		
+		},function(){
+		$(".s").css("background","url(images/68_60.PNG) 0px -30px no-repeat");
+		
+	});
+	});
+	</script>
+
+
+
+
+<!-- JiaThis Button BEGIN -->
+	<script type="text/javascript" src="http://v3.jiathis.com/code_mini/jiathis_r.js?move=0&amp;btn=r2.gif" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+
+
+<!-- 虾米FM滑动效果-->
+	<script>
+	$(".radioPlayerWrapper").hide();
+	$(".doubanFM").show();
+	$(".xiamiRadioImg").click(function(){
+	$(".radioPlayerWrapper").toggle(800);
+	});
+
+	$(".xiamiRadioImg").click(function(){
+	$(".doubanFM").toggle(800);
+	});
+
+	$(".main").hide();
+	$("#navBtn").click(function(){
+		$(".main").slideToggle(800);
+	});
+
+	$("#search_main").hide();
+	$("#SearchHideBtn").click(function(){
+		$("#search_main").toggle(800);
+	});
+
+	$(document).ready(function(){
+		$(".xiamiRadioImg").mouseenter(function(){
+			$(".xiamiRadioImg").addClass("xiamiRadio")
+		})
+		$(".xiamiRadioImg").mouseleave(function(){
+			$(".xiamiRadioImg").removeClass("xiamiRadio")
+		})
+	})
+
+
+	</script>
+
+
+
+
+
+
+
+
 </body>
 </html>
+
+
+
+
