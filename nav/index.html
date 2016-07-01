@@ -17,8 +17,8 @@
 			list-style: none;
 		}
 		html{
-			/*background:url(http://pic1.win4000.com/wallpaper/b/51f88137799e8.jpg) no-repeat center center fixed;*/
-			background:#676b71;
+			background:url(http://7xpf5o.com1.z0.glb.clouddn.com/wp-content/uploads/2015/12/tumblr_noz90zzCnv1rbcubso4_1280.jpg) no-repeat center center fixed;
+			/*background:#676b71;*/
 			background-size:cover;
 			position:relative;
 		}
@@ -44,7 +44,7 @@
 		}
 		
 		.peppermintCandy{
-			margin-left:100px;
+			margin-left:40px;
 			margin-top:22px;
 			width:100px;
 			height:30px;
@@ -88,7 +88,7 @@
 			width:390px;
 			opacity:0.7;
 			margin:0 auto;
-			margin-top:-100px;
+			margin-top:200px;
 			margin-bottom: 150px;
 												
 		}
@@ -115,14 +115,13 @@
 		#search_main{
 		width:629px;
 		height:40px;
-		position: fixed;
-		right:50%;
-		left:325px;
-		top:16px;
+		position: absolute;
+		left:50%;
+		top:20px;
 
 		}
 		#search {
-			width:550px;
+			width:500px;
 			height:36px;
 			border-radius:1px;
 			background: #fff;
@@ -294,19 +293,19 @@
 
 
 
-				<div  id="SearchHideBtn" style="position:absolute;top:10px;right:120px;cursor:pointer;"><img style="border-radius:25px;" src="http://7xpf5o.com1.z0.glb.clouddn.com/milo.png" height="50px" width="50px"></div>
+				<!-- <div  id="SearchHideBtn" style="position:absolute;top:10px;right:120px;cursor:pointer;"><img style="border-radius:25px;" src="http://7xpf5o.com1.z0.glb.clouddn.com/milo.png" height="50px" width="50px"></div> -->
 				
 		</div>
 	
  		
 
 		
-	 			<div style="margin:0 auto;margin-top:120px;"><center><img class="xiamiRadioImg" style="cursor:pointer;" src="http://7xpf5o.com1.z0.glb.clouddn.com/Atlas%20TouchII.png" width="320px" height="320px"></center></div>
-	 	
+	 			<!-- <div style="margin:0 auto;margin-top:120px;"><center><img class="xiamiRadioImg" style="cursor:pointer;" src="http://7xpf5o.com1.z0.glb.clouddn.com/Atlas%20TouchII.png" width="320px" height="320px"></center></div>
+	 	 -->
 
 	
 			<!-- 虾米音乐电台 -->
-		<div class="musicWrapper">
+<!-- 		<div class="musicWrapper">
 			<div class="radioPlayerWrapper">
 			<object id="radioPlayer" type="application/x-shockwave-flash" width="540" height="285" style="position:absolute;border-radius:10px;">
 				<param name="movie" value="http://img.xiami.net/res/kuang/xiamikuang5tab.swf">
@@ -314,7 +313,7 @@
 				<param name="allowScriptAccess" value="always">
 				<param name="FlashVars" value="rname=新歌&amp;dataUrl=http://www.xiami.com/kuang/xml/type/6/id/0&amp;ccnum=300&amp;recordNum=30">
             </object>
-            </div>
+            </div> -->
           
 		
 
@@ -447,6 +446,10 @@
 	                </li></a>
 
 	                 <a href="http://www.ttmeiju.com/" target="_blank" ><li data-desc="看美剧必备">天天美剧
+						<div class="triangleUp"></div><div class="triangleUp" style="border-bottom: 10px solid #ffffff;bottom:9px;"></div>
+	                </li></a>
+
+	                 <a href="http://www.dydh.tv/" target="_blank" ><li data-desc="电影导航收集">电影导航
 						<div class="triangleUp"></div><div class="triangleUp" style="border-bottom: 10px solid #ffffff;bottom:9px;"></div>
 	                </li></a>
 	                
@@ -855,7 +858,7 @@
 
 
 <!-- JiaThis Button BEGIN -->
-	<script type="text/javascript" src="http://v3.jiathis.com/code_mini/jiathis_r.js?move=0&amp;btn=r2.gif" charset="utf-8"></script>
+	<!-- <script type="text/javascript" src="http://v3.jiathis.com/code_mini/jiathis_r.js?move=0&amp;btn=r2.gif" charset="utf-8"></script> -->
 <!-- JiaThis Button END -->
 
 
@@ -872,12 +875,12 @@
 	$(".doubanFM").toggle(800);
 	});
 
-	
+	$(".main").hide();
 	$("#navBtn").click(function(){
 		$(".main").slideToggle(800);
 	});
 
-
+	
 	$("#SearchHideBtn").click(function(){
 		$("#search_main").toggle(800);
 	});
