@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+
 	<title>mywork</title>
 	<script src="//cdn.bootcss.com/jquery/3.0.0-rc1/jquery.min.js"></script>
 	<script src="http://7xpf5o.com1.z0.glb.clouddn.com/slider.js"></script>
@@ -10,12 +11,15 @@
 	<link rel="stylesheet" href="http://7xpf5o.com1.z0.glb.clouddn.com/default-skinII.css"> 
 	<script src="http://7xpf5o.com1.z0.glb.clouddn.com/photoswipe.min.js"></script> 
 	<script src="http://7xpf5o.com1.z0.glb.clouddn.com/photoswipe-ui-default.min.js"></script> 
+	<link rel="stylesheet" type="text/css" href="http://7xpf5o.com1.z0.glb.clouddn.com/tabsVIII.css">
+	<link rel="stylesheet" type="text/css" href="http://7xpf5o.com1.z0.glb.clouddn.com/tabstylesIII.css">
+  	<script src="http://7xpf5o.com1.z0.glb.clouddn.com/modernizr.custom.js"></script>
 	
 </head>
 <style>
 	body,dd,dl,form,h1,h2,h3,h4,h5,h6,input,ol,p,pre,td,textarea,th,ul,select{margin:0;padding:0;}
 	li{list-style:none}
-	a{text-decoration:none}
+	a{text-decoration:none;color:#ffffff;}
 	a:hover{text-decoration:none}
 	a{cursor:pointer}
 	img{border:none; vertical-align:top;}
@@ -33,14 +37,29 @@
 	.header{
 		width:100%;
 		height:70px;
-		background:#fff;
-		font-size:24px;
+		background:#4a4a4a;
+		font-size:20px;
 		font-weight: bold;
-		font-family: "microsoft yahei";
+		font-family: "Arial";
 		line-height: 70px;
-		text-align: center;
-		color:#3bc7c4;
+		color:#ffffff;
+		box-shadow: 0 0 2px 0 #121212;
+	}
+	.header_part01{
+		width:1000px;
+		margin:0 auto;
+		color:#51c4c8;
 
+	}
+	.header_part02 {
+		float:right;		
+		height:70px;
+	}
+	.header_part02 li{
+		float: left;
+		margin-top:24px;
+		margin-left:16px;
+		
 	}
 	/*轮播图css*/
 	.flexslider {
@@ -165,14 +184,14 @@
 
 
 /*作品展示部分*/
-.main{
+#main{
 	width:100%;
-	background:#f1f1f1;
-	height:1000px;
+	background:#f1f1f1;	
 	margin-top:30px;
 }
 .img_wrapper{
 	width:1000px;
+	height:100%;
 	margin:0 auto;
 }
 .img_wrapper  a{
@@ -189,24 +208,135 @@
 	
 }
 .main_text{
-	font-size:28px;
+	font-size:16px;
 	font-family: "Arial";
 	font-weight:normal;
-	color:#57575e;
+	color:#fff;
 	text-align: center;
-	height:100px;
-	line-height: 100px;
+	height:40px;
+	width:160px;
+	line-height: 40px;
+	clear:left;
+	background:#49cbcd;
+	border-radius: 0px;
+	margin-bottom:20px;
 }
-.main ol .big_box{
+#contact_text li{
+	font-size:16px;
+	font-family: "Arial";
+	font-weight:normal;
+	color:#fff;
+	text-align: center;
+	height:40px;
+	width:160px;
+	line-height: 40px;
+	clear:left;
+	background:#49cbcd;
+	border-radius: 0px;
+	margin-bottom:2px;
+}
+.content-wrap{
+	font-family:"Arial";
+	color:#74777b;
+}
+
+#main ol .big_box{
 	display:none;
 }
+.about{
+	width:100%;
+	background-color: #ffffff;
+}
+.load_more{
+	font-size:14px;
+	font-family: "Arial";
+	font-weight:normal;
+	color:#fff;
+	text-align: center;
+	height:40px;
+	width:140px;
+	line-height: 40px;
+	clear:left;
+	background:#49cbcd;
+	border-radius: 2px;
+	margin:0 auto;
+	margin-top:700px;
+	margin-bottom:60px;
+}
+#about_me{
+	font-size:16px;
+	font-family: "Arial";
+	font-weight:normal;
+	color:#fff;
+	text-align: center;
+	height:40px;
+	width:160px;
+	line-height: 40px;
+	background:#49cbcd;
+	border-radius: 0px;
+	margin-bottom:40px;
+
+}
+.ds-thread{
+	width:600px;
+	margin:0 auto;
+}
+
+.footer{
+	width:100%;
+	height:200px;
+	background:#4a4a4a;
+}
+.footer_part{
+	width:360px;
+	height:120px;
+	margin:0 auto; 
+	padding-top:50px;
+
+}
+.footer_part01,.footer_part03{
+	font-size: 12px;
+	font-family:"Arial";
+	font-weight: normal;
+	color:#eeeeee;
+}
+.footer_part01 li{
+	float: left;
+	margin-right: 50px;
+}
+.footer_part01 li :hover{
+	color:#51c4c8;
+}
+.footer_part02{
+	clear:left;
+	padding-top:30px;
+
+	margin-left: 110px;
+}
+.footer_part02 li{
+	float:left;
+	margin-right:35px;
+}
+.footer_part03{
+	padding-top:30px;
+	clear:left;
+	margin-left:18px;
+}
+
 
 
 
 </style>
 <body>
 	<div class="header">
-		阿飞的作品集
+		<div class="header_part01">LEOFEE
+			<ul class="header_part02">
+			<li class="button hvr-grow-shadow"><a href="https://www.douban.com/people/59834235/" target="_blank" rel="external"><img src="http://7xpf5o.com1.z0.glb.clouddn.com/douban_logoII.png" height="22px" width="22px"></a></li>
+			<li class="button hvr-grow-shadow"><a href="https://www.zhihu.com/people/lazy-star-85" target="_blank" rel="external"><img src="http://7xpf5o.com1.z0.glb.clouddn.com/zhihu_logo.png" height="22px" width="22px"></a></li>
+			<li class="button hvr-grow-shadow"><a href="http://7xpf5o.com1.z0.glb.clouddn.com/weixin_codeII.jpg" target="_blank" rel="external"><img src="http://7xpf5o.com1.z0.glb.clouddn.com/weixin_logo.png" height="22px" width="22px"></a></li>
+		</ul>
+		</div>
+		
 	</div>
 	
 <!-- 轮播图 -->
@@ -214,12 +344,12 @@
 	<ul class="slides">
 		<li>
 			<a title="" target="_blank" href="#">
-				<img width="1920" height="482" alt="" style="background: url(http://7xpf5o.com1.z0.glb.clouddn.com/banner3.jpg) no-repeat center;" src="http://7xpf5o.com1.z0.glb.clouddn.com/alpha.png">
+				<img width="1920" height="482" alt="" style="background: url(http://7xpf5o.com1.z0.glb.clouddn.com/banner1.jpg) no-repeat center;" src="http://7xpf5o.com1.z0.glb.clouddn.com/alpha.png">
 			</a>
 		</li>
 		<li>
 			<a title="" href="#">
-				<img width="1920" height="482" alt="" style="background: url(http://7xpf5o.com1.z0.glb.clouddn.com/banner2.jpg) no-repeat center;" src="http://7xpf5o.com1.z0.glb.clouddn.com/alpha.png">
+				<img width="1920" height="482" alt="" style="background: url(http://7xpf5o.com1.z0.glb.clouddn.com/banner02.jpg) no-repeat center;" src="http://7xpf5o.com1.z0.glb.clouddn.com/alpha.png">
 			</a>
 		</li>
 		<li>
@@ -234,8 +364,8 @@
 		</li>
 	</ul>
 	<ul class="flex-direction-nav">
-		<li><a class="flex-prev" href="javascript:;" target="_blank" rel="external">Previous</a></li>
-		<li><a class="flex-next" href="javascript:;" target="_blank" rel="external">Next</a></li>
+		<li><a class="flex-prev" href="javascript:void(0)" target="_blank" rel="external">Previous</a></li>
+		<li><a class="flex-next" href="javascript:void(0)" target="_blank" rel="external">Next</a></li>
 	</ul>
 	<ol id="bannerCtrl" class="flex-control-nav flex-control-paging">
 		<li><a>1</a></li>
@@ -271,12 +401,90 @@
 </div>
 
 <!-- 作品展示部分 -->
-<div class="main">
+<div id="main">
 	<ol>
 		<li class="big_box" style="display:block;">
-			<div class="main_text">Sketch Portfolio</div>
+			
 				<div class="img_wrapper">
-				
+				<div class="main_text">Sketch Portfolio</div>
+					<div class="m-p-g">				
+						<div id="demo-test-gallery" class="demo-gallery">							
+								<a href="http://7xpf5o.com1.z0.glb.clouddn.com/sketch_01.jpg" data-size="2592x1944" data-med-size="1296x972" data-author="Folkert Gorter" class="button hvr-grow-shadow" target="_blank" rel="external">
+	          					<img src="http://7xpf5o.com1.z0.glb.clouddn.com/sketch_s_01.jpg" width="320px" height="320px" alt="">
+	          		<!-- <figure>This is dummy caption.</figure> -->
+	        					</a>
+	        					<a href="http://7xpf5o.com1.z0.glb.clouddn.com/sketch_02.jpg" data-size="4928x3264" data-med-size="1024x1024" data-author="Folkert Gorter" class="button hvr-grow-shadow" target="_blank" rel="external">
+	          					<img src="http://7xpf5o.com1.z0.glb.clouddn.com/sketch_s_02.jpg" width="320px" height="320px" alt="">
+	          		<!-- <figure>This is dummy caption.</figure> -->
+	        					</a>
+	        					<a style="margin-right:0;" href="http://7xpf5o.com1.z0.glb.clouddn.com/sketch_03.jpg" data-size="4928x3264" data-med-size="1024x1024" data-author="Folkert Gorter" class="button hvr-grow-shadow" target="_blank" rel="external">
+	          					<img src="http://7xpf5o.com1.z0.glb.clouddn.com/sketch_s_03.jpg" width="320px" height="320px" alt="">
+	          		<!-- <figure>This is dummy caption.</figure> -->
+	        					</a>
+	        					<a href="http://7xpf5o.com1.z0.glb.clouddn.com/sketch_04.jpg" data-size="4544x3016" data-med-size="1024x1024" data-author="Folkert Gorter" class="button hvr-grow-shadow" target="_blank" rel="external">
+	          					<img src="http://7xpf5o.com1.z0.glb.clouddn.com/sketch_s_04.jpg" width="320px" height="320px" alt="">
+	          		<!-- <figure>This is dummy caption.</figure> -->
+	        					</a>
+	        					<a href="http://7xpf5o.com1.z0.glb.clouddn.com/sketch_05.jpg" data-size="4928x3264" data-med-size="1024x1024" data-author="Folkert Gorter" class="button hvr-grow-shadow" target="_blank" rel="external">
+	          					<img src="http://7xpf5o.com1.z0.glb.clouddn.com/sketch_s_05.jpg" width="320px" height="320px" alt="">
+	          		<!-- <figure>This is dummy caption.</figure> -->
+	        					</a>
+	        					<a style="margin-right:0;" href="http://7xpf5o.com1.z0.glb.clouddn.com/sketch_06.jpg" data-size="4928x3264" data-med-size="1024x1024" data-author="Folkert Gorter" class="button hvr-grow-shadow" target="_blank" rel="external">
+	          					<img src="http://7xpf5o.com1.z0.glb.clouddn.com/sketch_s_06.jpg" width="320px" height="320px" alt="">
+	          		<!-- <figure>This is dummy caption.</figure> -->
+	        					</a>
+	        						        					        							 								
+					</div>
+										
+				</div>
+							
+			</div>
+
+		</li>
+
+		<li class="big_box" style="clear:left;">
+			
+				<div class="img_wrapper">
+				<div class="main_text">Graphic Portfolio</div>
+					<div class="m-p-g">				
+						<div id="demo-test-gallery" class="demo-gallery">							
+								<a href="http://7xpf5o.com1.z0.glb.clouddn.com/Graphic_01.jpg" data-size="2650x2650" data-med-size="1024x1024" data-author="Folkert Gorter" class="button hvr-grow-shadow" target="_blank" rel="external">
+	          					<img src="http://7xpf5o.com1.z0.glb.clouddn.com/Graphic_s_01.jpg" width="320px" height="320px" alt="">
+	          		<!-- <figure>This is dummy caption.</figure> -->
+	        					</a>
+	        					<a href="http://7xpf5o.com1.z0.glb.clouddn.com/Graphic_02.jpg" data-size="1150x450" data-med-size="1024x1024" data-author="Folkert Gorter" class="button hvr-grow-shadow" target="_blank" rel="external">
+	          					<img src="http://7xpf5o.com1.z0.glb.clouddn.com/Graphic_s_02.jpg" width="320px" height="320px" alt="">
+	          		<!-- <figure>This is dummy caption.</figure> -->
+	        					</a>
+	        					<a style="margin-right:0;" href="http://7xpf5o.com1.z0.glb.clouddn.com/Graphic_03.jpg" data-size="3437x2551" data-med-size="1024x1024" data-author="Folkert Gorter" class="button hvr-grow-shadow" target="_blank" rel="external">
+	          					<img src="http://7xpf5o.com1.z0.glb.clouddn.com/Graphic_s_03.jpg" width="320px" height="320px" alt="">
+	          		<!-- <figure>This is dummy caption.</figure> -->
+	        					</a>
+	        					<a href="http://7xpf5o.com1.z0.glb.clouddn.com/Graphic_04.jpg" data-size="720x540" data-med-size="1024x1024" data-author="Folkert Gorter" class="button hvr-grow-shadow" target="_blank" rel="external">
+	          					<img src="http://7xpf5o.com1.z0.glb.clouddn.com/Graphic_s_04.jpg" width="320px" height="320px" alt="">
+	          		<!-- <figure>This is dummy caption.</figure> -->
+	        					</a>
+	        					<a href="http://7xpf5o.com1.z0.glb.clouddn.com/Graphic_05.png" data-size="794x1123" data-med-size="1024x1024" data-author="Folkert Gorter" class="button hvr-grow-shadow" target="_blank" rel="external">
+	          					<img src="http://7xpf5o.com1.z0.glb.clouddn.com/Graphic_s_05.jpg" width="320px" height="320px" alt="">
+	          		<!-- <figure>This is dummy caption.</figure> -->
+	        					</a>
+	        					<a style="margin-right:0;" href="http://7xpf5o.com1.z0.glb.clouddn.com/Graphic_06.jpg" data-size="1280x720" data-med-size="1024x1024" data-author="Folkert Gorter" class="button hvr-grow-shadow" target="_blank" rel="external">
+	          					<img src="http://7xpf5o.com1.z0.glb.clouddn.com/Graphic_s_06.jpg" width="320px" height="320px" alt="">
+	          		<!-- <figure>This is dummy caption.</figure> -->
+	        					</a>
+	        						        					        							 								
+					</div>
+										
+				</div>
+							
+			</div>
+
+		</li>
+
+		<li class="big_box" style="clear:left;">
+			
+				<div class="img_wrapper">
+				<div class="main_text">Web Portfolio</div>
 					<div class="m-p-g">				
 						<div id="demo-test-gallery" class="demo-gallery">							
 								<a href="http://7xpf5o.com1.z0.glb.clouddn.com/where%20the%20days%20go.jpg" data-size="1600x1600" data-med-size="1024x1024" data-author="Folkert Gorter" class="button hvr-grow-shadow" target="_blank" rel="external">
@@ -313,9 +521,9 @@
 		</li>
 
 		<li class="big_box" style="clear:left;">
-			<div class="main_text">Graphic Portfolio</div>
+			
 				<div class="img_wrapper">
-				
+				<div class="main_text">App Portfolio</div>
 					<div class="m-p-g">				
 						<div id="demo-test-gallery" class="demo-gallery">							
 								<a href="http://7xpf5o.com1.z0.glb.clouddn.com/where%20the%20days%20go.jpg" data-size="1600x1600" data-med-size="1024x1024" data-author="Folkert Gorter" class="button hvr-grow-shadow" target="_blank" rel="external">
@@ -352,87 +560,9 @@
 		</li>
 
 		<li class="big_box" style="clear:left;">
-			<div class="main_text">Web Portfolio</div>
+			
 				<div class="img_wrapper">
-				
-					<div class="m-p-g">				
-						<div id="demo-test-gallery" class="demo-gallery">							
-								<a href="http://7xpf5o.com1.z0.glb.clouddn.com/where%20the%20days%20go.jpg" data-size="1600x1600" data-med-size="1024x1024" data-author="Folkert Gorter" class="button hvr-grow-shadow" target="_blank" rel="external">
-	          					<img src="http://7xpf5o.com1.z0.glb.clouddn.com/where%20the%20days%20go.jpg" width="320px" height="320px" alt="">
-	          		<!-- <figure>This is dummy caption.</figure> -->
-	        					</a>
-	        					<a href="http://7xpf5o.com1.z0.glb.clouddn.com/where%20the%20days%20go.jpg" data-size="1600x1600" data-med-size="1024x1024" data-author="Folkert Gorter" class="button hvr-grow-shadow" target="_blank" rel="external">
-	          					<img src="http://7xpf5o.com1.z0.glb.clouddn.com/where%20the%20days%20go.jpg" width="320px" height="320px" alt="">
-	          		<!-- <figure>This is dummy caption.</figure> -->
-	        					</a>
-	        					<a style="margin-right:0;" href="http://7xpf5o.com1.z0.glb.clouddn.com/where%20the%20days%20go.jpg" data-size="1600x1600" data-med-size="1024x1024" data-author="Folkert Gorter" class="button hvr-grow-shadow" target="_blank" rel="external">
-	          					<img src="http://7xpf5o.com1.z0.glb.clouddn.com/where%20the%20days%20go.jpg" width="320px" height="320px" alt="">
-	          		<!-- <figure>This is dummy caption.</figure> -->
-	        					</a>
-	        					<a href="http://7xpf5o.com1.z0.glb.clouddn.com/where%20the%20days%20go.jpg" data-size="1600x1600" data-med-size="1024x1024" data-author="Folkert Gorter" class="button hvr-grow-shadow" target="_blank" rel="external">
-	          					<img src="http://7xpf5o.com1.z0.glb.clouddn.com/where%20the%20days%20go.jpg" width="320px" height="320px" alt="">
-	          		<!-- <figure>This is dummy caption.</figure> -->
-	        					</a>
-	        					<a href="http://7xpf5o.com1.z0.glb.clouddn.com/where%20the%20days%20go.jpg" data-size="1600x1600" data-med-size="1024x1024" data-author="Folkert Gorter" class="button hvr-grow-shadow" target="_blank" rel="external">
-	          					<img src="http://7xpf5o.com1.z0.glb.clouddn.com/where%20the%20days%20go.jpg" width="320px" height="320px" alt="">
-	          		<!-- <figure>This is dummy caption.</figure> -->
-	        					</a>
-	        					<a style="margin-right:0;" href="http://7xpf5o.com1.z0.glb.clouddn.com/where%20the%20days%20go.jpg" data-size="1600x1600" data-med-size="1024x1024" data-author="Folkert Gorter" class="button hvr-grow-shadow" target="_blank" rel="external">
-	          					<img src="http://7xpf5o.com1.z0.glb.clouddn.com/where%20the%20days%20go.jpg" width="320px" height="320px" alt="">
-	          		<!-- <figure>This is dummy caption.</figure> -->
-	        					</a>
-	        						        					        							 								
-					</div>
-										
-				</div>
-							
-			</div>
-
-		</li>
-
-		<li class="big_box" style="clear:left;">
-			<div class="main_text">App Portfolio</div>
-				<div class="img_wrapper">
-				
-					<div class="m-p-g">				
-						<div id="demo-test-gallery" class="demo-gallery">							
-								<a href="http://7xpf5o.com1.z0.glb.clouddn.com/where%20the%20days%20go.jpg" data-size="1600x1600" data-med-size="1024x1024" data-author="Folkert Gorter" class="button hvr-grow-shadow" target="_blank" rel="external">
-	          					<img src="http://7xpf5o.com1.z0.glb.clouddn.com/where%20the%20days%20go.jpg" width="320px" height="320px" alt="">
-	          		<!-- <figure>This is dummy caption.</figure> -->
-	        					</a>
-	        					<a href="http://7xpf5o.com1.z0.glb.clouddn.com/where%20the%20days%20go.jpg" data-size="1600x1600" data-med-size="1024x1024" data-author="Folkert Gorter" class="button hvr-grow-shadow" target="_blank" rel="external">
-	          					<img src="http://7xpf5o.com1.z0.glb.clouddn.com/where%20the%20days%20go.jpg" width="320px" height="320px" alt="">
-	          		<!-- <figure>This is dummy caption.</figure> -->
-	        					</a>
-	        					<a style="margin-right:0;" href="http://7xpf5o.com1.z0.glb.clouddn.com/where%20the%20days%20go.jpg" data-size="1600x1600" data-med-size="1024x1024" data-author="Folkert Gorter" class="button hvr-grow-shadow" target="_blank" rel="external">
-	          					<img src="http://7xpf5o.com1.z0.glb.clouddn.com/where%20the%20days%20go.jpg" width="320px" height="320px" alt="">
-	          		<!-- <figure>This is dummy caption.</figure> -->
-	        					</a>
-	        					<a href="http://7xpf5o.com1.z0.glb.clouddn.com/where%20the%20days%20go.jpg" data-size="1600x1600" data-med-size="1024x1024" data-author="Folkert Gorter" class="button hvr-grow-shadow" target="_blank" rel="external">
-	          					<img src="http://7xpf5o.com1.z0.glb.clouddn.com/where%20the%20days%20go.jpg" width="320px" height="320px" alt="">
-	          		<!-- <figure>This is dummy caption.</figure> -->
-	        					</a>
-	        					<a href="http://7xpf5o.com1.z0.glb.clouddn.com/where%20the%20days%20go.jpg" data-size="1600x1600" data-med-size="1024x1024" data-author="Folkert Gorter" class="button hvr-grow-shadow" target="_blank" rel="external">
-	          					<img src="http://7xpf5o.com1.z0.glb.clouddn.com/where%20the%20days%20go.jpg" width="320px" height="320px" alt="">
-	          		<!-- <figure>This is dummy caption.</figure> -->
-	        					</a>
-	        					<a style="margin-right:0;" href="http://7xpf5o.com1.z0.glb.clouddn.com/where%20the%20days%20go.jpg" data-size="1600x1600" data-med-size="1024x1024" data-author="Folkert Gorter" class="button hvr-grow-shadow" target="_blank" rel="external">
-	          					<img src="http://7xpf5o.com1.z0.glb.clouddn.com/where%20the%20days%20go.jpg" width="320px" height="320px" alt="">
-	          		<!-- <figure>This is dummy caption.</figure> -->
-	        					</a>
-	        						        					        							 								
-					</div>
-										
-				</div>
-							
-			</div>
-
-		</li>
-
-		<li class="big_box" style="clear:left;">
-			<div class="main_text">Else</div>
-				<div class="img_wrapper">
-				
+				<div class="main_text">Else</div>
 					<div class="m-p-g">				
 						<div id="demo-test-gallery" class="demo-gallery">							
 								<a href="http://7xpf5o.com1.z0.glb.clouddn.com/where%20the%20days%20go.jpg" data-size="1600x1600" data-med-size="1024x1024" data-author="Folkert Gorter" class="button hvr-grow-shadow" target="_blank" rel="external">
@@ -468,7 +598,66 @@
 
 		</li>
 	</ol>
+
+	<!-- 关于我 -->	
+		<div class="load_more">Load More</div>
+		<div class="about">
+			<div style="width:1000px;margin:0 auto;">
+			<div id="about_me">About</div>
+			<img src="http://7xpf5o.com1.z0.glb.clouddn.com/where%20the%20days%20go.jpg">
+			</div>
+			
+		</div>
+	<!--留言板-->
+	<div style="width:1000px;margin:0 auto;">
+	<ul id="contact_text">
+			<li>Contact</li>
+			</ul>
+		
+		<section>
+				<div class="tabs tabs-style-circle" style="margin-top:100px;">
+					<nav>
+						<ul>
+							<li><a href="#section-circle-1" class="icon icon-plug"><span>Connect</span></a></li>
+							<li><a href="#section-circle-2" class="icon icon-gift"><span>Phone</span></a></li>
+							<li><a href="#section-circle-3" class="icon icon-box"><span>Mail</span></a></li>
+							<li><a href="#section-circle-4" class="icon icon-date"><span>Wechat</span></a></li>
+							<li><a href="#section-circle-5" class="icon icon-plane"><span>Message</span></a></li>
+						</ul>
+					</nav>
+					<div class="content-wrap">
+						<section id="section-circle-1"><p><center><img src="http://7xpf5o.com1.z0.glb.clouddn.com/about.png" width="200px" height="200px"></center></p></section>
+						<section id="section-circle-2"><p><center>电话：132-6986-0725</center></p></section>
+						<section id="section-circle-3"><p><center>QQ邮箱:497051512@qq.com<br><br>Gmail:voice.in.your.eyes@gmail.com</center></p></section>
+						<section id="section-circle-4"><p id="section4"><center><img src="http://7xpf5o.com1.z0.glb.clouddn.com/weixin_codeII.jpg " width="300px" height="300px"></center></p></section>
+						<section id="section-circle-5"><p><div class="ds-thread" data-thread-key="mywork" data-title="" data-url="http://leofee.co/mywork/"></div></p></section>
+					</div><!-- /content -->
+				</div><!-- /tabs -->
+			</section>
+	</div>
+
+
+	<!-- footer -->
+		<div class="footer">
+			<div class="footer_part">
+				<ul class="footer_part01">
+					<li><a href="">HOME</a></li>
+					<li><a href="#main">PORTFOLIO</a></li>
+					<li><a href="#about_me">ABOUT</a></li>
+					<li style="margin-right:0;"><a href="#contact_text">CONTACT</a></li>
+				</ul>
+				<ul class="footer_part02">
+					<li class="button hvr-grow-shadow"><a href="https://www.douban.com/people/59834235/" target="_blank" rel="external"><img src="http://7xpf5o.com1.z0.glb.clouddn.com/douban_logoII.png" height="22px" width="22px"></a></li>
+					<li class="button hvr-grow-shadow"><a href="https://www.zhihu.com/people/lazy-star-85" target="_blank" rel="external"><img src="http://7xpf5o.com1.z0.glb.clouddn.com/zhihu_logo.png" height="22px" width="22px"></a></li>
+					<li class="button hvr-grow-shadow"><a href="http://7xpf5o.com1.z0.glb.clouddn.com/weixin_codeII.jpg" target="_blank" rel="external"><img src="http://7xpf5o.com1.z0.glb.clouddn.com/weixin_logo.png" height="22px" width="22px"></a></li>
+				</ul>
+				<div class="footer_part03">©Copyright 2016,All Rights Reserved.Designed by <a href="http://leofee.co" target="_blank" rel="external"><span style="color:#51c4c8;">LeoFee</span></a>.</div>
+			</div>
+		</div>
+	
 </div>
+
+
 
 
 
@@ -569,14 +758,17 @@ $(function() {
 	$('#banner_tabs .flex-next').click(function() {
 		bannerSlider.next()
 	});
-	//选项卡
+
+// 选项卡部分
 	$('.nav ul li').click(function(){
 		var navIndex=$(this).index('.nav ul li');
-		$('.main ol .big_box').hide();
-		$('.main ol .big_box').eq(navIndex).show();
+		$('#main ol .big_box').hide();
+		$('#main ol .big_box').eq(navIndex).show();
 	})
 })
+
 </script>
+
 
 <!-- photoswipe图片查看器 -->
 <script type="text/javascript">
@@ -872,6 +1064,39 @@ $(function() {
 		initPhotoSwipeFromDOM('.demo-gallery');
 
 	})();
+</script>
+
+<!--联系方式切换选项卡  -->
+	<script src="http://7xpf5o.com1.z0.glb.clouddn.com/cbpFWTabs.js"></script>
+		<script>
+			(function() {
+
+				[].slice.call( document.querySelectorAll( '.tabs' ) ).forEach( function( el ) {
+					new CBPFWTabs( el );
+				});
+
+			})();
+		</script>
+
+
+<!-- 多说评论框 start -->
+	
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"leofee"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+<!-- 多说公共JS代码 end -->
+<script type="text/javascript">
+$('.flex-direction-nav a').removeAttr("target");
 </script>
 </body>
 </html>
